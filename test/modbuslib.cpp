@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include "modbus.h"
 #include <iostream>
+#include "TestClass.h"
 
 int main(void) {
   modbus_t *mb;
   uint16_t tab_reg[32];
+
+  TestClass item {10};
+  std::cout << item.get_item() << std::endl;
 
   mb = modbus_new_rtu("/dev/ttyUSB0", 115200, 'N', 8, 1);;
   modbus_connect(mb);
