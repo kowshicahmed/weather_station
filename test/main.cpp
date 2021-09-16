@@ -8,8 +8,8 @@ using namespace Modbus;
 int main (int argc, char **argv) {
   string port ("/dev/ttyUSB0");
 
-  Master mb (Rtu, port , "38400E1"); // new master on RTU
-  Slave & slv = mb.addSlave (33); // to the slave at address 33
+  Master mb (Rtu, port , "11520E1"); // new master on RTU
+  Slave & slv = mb.addSlave (1); // to the slave at address 33
 
   if (mb.open ()) { // open a connection
     // success, do what you want here
