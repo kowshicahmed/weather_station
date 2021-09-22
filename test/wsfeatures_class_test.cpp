@@ -1,9 +1,10 @@
-#include "WsFeatures.h"
+#include "WeatherStation.h"
 
 int main ()
 {
-    WsFeatures connection_1 {std::string {"rtu"}, std::string {"/dev/ttyUSB0"}, 0, 9600, 'N', 8, 1};
+    WeatherStation connection_1 {std::string {"/dev/ttyUSB0"}, 9600, 'N', 8, 1, 1};
     connection_1.read_software_version();
+    WeatherStation connection_2 {std::string {"127.0.0.1"}, 1502, 1};
     
     return 0;
 }
