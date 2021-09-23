@@ -1,0 +1,3 @@
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/rebuild_cache.dir
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/edit_cache.dir
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/simple_test.dir
