@@ -230,6 +230,27 @@ WeatherStation_BINARY_DIR:STATIC=/home/kowshicahmed/WS_Project/weather_station/b
 //Value Computed by CMake
 WeatherStation_SOURCE_DIR:STATIC=/home/kowshicahmed/WS_Project/weather_station
 
+//The directory containing a CMake configuration file for libmodbus-dev.
+libmodbus-dev_DIR:PATH=libmodbus-dev_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for libmodbus5.
+libmodbus5_DIR:PATH=libmodbus5_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for libmodbus.
+libmodbus_DIR:PATH=libmodbus_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for libmodbusepsi-dev.
+libmodbusepsi-dev_DIR:PATH=libmodbusepsi-dev_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for libmodbusepsi5.
+libmodbusepsi5_DIR:PATH=libmodbusepsi5_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for libmodbuspp.
+libmodbuspp_DIR:PATH=libmodbuspp_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for modbus.
+modbus_DIR:PATH=modbus_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

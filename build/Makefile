@@ -123,6 +123,46 @@ simple_test/fast:
 	$(MAKE) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/build
 .PHONY : simple_test/fast
 
+#=============================================================================
+# Target rules for targets named TestClass
+
+# Build rule for target.
+TestClass: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestClass
+.PHONY : TestClass
+
+# fast build rule for target.
+TestClass/fast:
+	$(MAKE) -f CMakeFiles/TestClass.dir/build.make CMakeFiles/TestClass.dir/build
+.PHONY : TestClass/fast
+
+lib/TestClass.o: lib/TestClass.cpp.o
+
+.PHONY : lib/TestClass.o
+
+# target to build an object file
+lib/TestClass.cpp.o:
+	$(MAKE) -f CMakeFiles/TestClass.dir/build.make CMakeFiles/TestClass.dir/lib/TestClass.cpp.o
+.PHONY : lib/TestClass.cpp.o
+
+lib/TestClass.i: lib/TestClass.cpp.i
+
+.PHONY : lib/TestClass.i
+
+# target to preprocess a source file
+lib/TestClass.cpp.i:
+	$(MAKE) -f CMakeFiles/TestClass.dir/build.make CMakeFiles/TestClass.dir/lib/TestClass.cpp.i
+.PHONY : lib/TestClass.cpp.i
+
+lib/TestClass.s: lib/TestClass.cpp.s
+
+.PHONY : lib/TestClass.s
+
+# target to generate assembly for a file
+lib/TestClass.cpp.s:
+	$(MAKE) -f CMakeFiles/TestClass.dir/build.make CMakeFiles/TestClass.dir/lib/TestClass.cpp.s
+.PHONY : lib/TestClass.cpp.s
+
 test/simple_test.o: test/simple_test.cpp.o
 
 .PHONY : test/simple_test.o
@@ -159,6 +199,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... simple_test"
+	@echo "... TestClass"
+	@echo "... lib/TestClass.o"
+	@echo "... lib/TestClass.i"
+	@echo "... lib/TestClass.s"
 	@echo "... test/simple_test.o"
 	@echo "... test/simple_test.i"
 	@echo "... test/simple_test.s"

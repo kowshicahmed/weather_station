@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/simple_test.dir/test/simple_test.cpp.o  -o simple_test 
+/usr/bin/c++     CMakeFiles/simple_test.dir/test/simple_test.cpp.o  -o simple_test  libTestClass.a 
