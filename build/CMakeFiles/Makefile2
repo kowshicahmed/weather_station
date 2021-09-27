@@ -53,7 +53,11 @@ CMAKE_BINARY_DIR = /home/kowshicahmed/WS_Project/weather_station/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/wsfeatures_class_test.dir/all
 all: CMakeFiles/simple_test.dir/all
+all: CMakeFiles/config.dir/all
+all: CMakeFiles/modbus.dir/all
+all: CMakeFiles/WeatherStation.dir/all
 all: CMakeFiles/TestClass.dir/all
 
 .PHONY : all
@@ -64,24 +68,57 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/wsfeatures_class_test.dir/clean
 clean: CMakeFiles/simple_test.dir/clean
+clean: CMakeFiles/config.dir/clean
+clean: CMakeFiles/modbus.dir/clean
+clean: CMakeFiles/WeatherStation.dir/clean
 clean: CMakeFiles/TestClass.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/wsfeatures_class_test.dir
+
+# All Build rule for target.
+CMakeFiles/wsfeatures_class_test.dir/all: CMakeFiles/modbus.dir/all
+CMakeFiles/wsfeatures_class_test.dir/all: CMakeFiles/WeatherStation.dir/all
+	$(MAKE) -f CMakeFiles/wsfeatures_class_test.dir/build.make CMakeFiles/wsfeatures_class_test.dir/depend
+	$(MAKE) -f CMakeFiles/wsfeatures_class_test.dir/build.make CMakeFiles/wsfeatures_class_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=9,10 "Built target wsfeatures_class_test"
+.PHONY : CMakeFiles/wsfeatures_class_test.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/wsfeatures_class_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/wsfeatures_class_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
+.PHONY : CMakeFiles/wsfeatures_class_test.dir/rule
+
+# Convenience name for target.
+wsfeatures_class_test: CMakeFiles/wsfeatures_class_test.dir/rule
+
+.PHONY : wsfeatures_class_test
+
+# clean rule for target.
+CMakeFiles/wsfeatures_class_test.dir/clean:
+	$(MAKE) -f CMakeFiles/wsfeatures_class_test.dir/build.make CMakeFiles/wsfeatures_class_test.dir/clean
+.PHONY : CMakeFiles/wsfeatures_class_test.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/simple_test.dir
 
 # All Build rule for target.
+CMakeFiles/simple_test.dir/all: CMakeFiles/modbus.dir/all
 CMakeFiles/simple_test.dir/all: CMakeFiles/TestClass.dir/all
 	$(MAKE) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/depend
 	$(MAKE) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=3,4 "Built target simple_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=7,8 "Built target simple_test"
 .PHONY : CMakeFiles/simple_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/simple_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/simple_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
 .PHONY : CMakeFiles/simple_test.dir/rule
@@ -95,6 +132,87 @@ simple_test: CMakeFiles/simple_test.dir/rule
 CMakeFiles/simple_test.dir/clean:
 	$(MAKE) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/clean
 .PHONY : CMakeFiles/simple_test.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/config.dir
+
+# All Build rule for target.
+CMakeFiles/config.dir/all:
+	$(MAKE) -f CMakeFiles/config.dir/build.make CMakeFiles/config.dir/depend
+	$(MAKE) -f CMakeFiles/config.dir/build.make CMakeFiles/config.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num= "Built target config"
+.PHONY : CMakeFiles/config.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/config.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/config.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
+.PHONY : CMakeFiles/config.dir/rule
+
+# Convenience name for target.
+config: CMakeFiles/config.dir/rule
+
+.PHONY : config
+
+# clean rule for target.
+CMakeFiles/config.dir/clean:
+	$(MAKE) -f CMakeFiles/config.dir/build.make CMakeFiles/config.dir/clean
+.PHONY : CMakeFiles/config.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/modbus.dir
+
+# All Build rule for target.
+CMakeFiles/modbus.dir/all:
+	$(MAKE) -f CMakeFiles/modbus.dir/build.make CMakeFiles/modbus.dir/depend
+	$(MAKE) -f CMakeFiles/modbus.dir/build.make CMakeFiles/modbus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=5,6 "Built target modbus"
+.PHONY : CMakeFiles/modbus.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/modbus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/modbus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
+.PHONY : CMakeFiles/modbus.dir/rule
+
+# Convenience name for target.
+modbus: CMakeFiles/modbus.dir/rule
+
+.PHONY : modbus
+
+# clean rule for target.
+CMakeFiles/modbus.dir/clean:
+	$(MAKE) -f CMakeFiles/modbus.dir/build.make CMakeFiles/modbus.dir/clean
+.PHONY : CMakeFiles/modbus.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/WeatherStation.dir
+
+# All Build rule for target.
+CMakeFiles/WeatherStation.dir/all:
+	$(MAKE) -f CMakeFiles/WeatherStation.dir/build.make CMakeFiles/WeatherStation.dir/depend
+	$(MAKE) -f CMakeFiles/WeatherStation.dir/build.make CMakeFiles/WeatherStation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=3,4 "Built target WeatherStation"
+.PHONY : CMakeFiles/WeatherStation.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/WeatherStation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WeatherStation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
+.PHONY : CMakeFiles/WeatherStation.dir/rule
+
+# Convenience name for target.
+WeatherStation: CMakeFiles/WeatherStation.dir/rule
+
+.PHONY : WeatherStation
+
+# clean rule for target.
+CMakeFiles/WeatherStation.dir/clean:
+	$(MAKE) -f CMakeFiles/WeatherStation.dir/build.make CMakeFiles/WeatherStation.dir/clean
+.PHONY : CMakeFiles/WeatherStation.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/TestClass.dir

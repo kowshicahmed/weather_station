@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kowshicahmed/WS_Project/weather_station/lib -I/usr/include/modbusepsi 
+CXX_INCLUDES = -I/home/kowshicahmed/WS_Project/weather_station/lib, -I/home/kowshicahmed/WS_Project/weather_station/dependencies/libmodbus, -I/usr/include/modbusepsi 
 

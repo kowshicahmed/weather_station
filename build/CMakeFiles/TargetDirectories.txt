@@ -1,4 +1,8 @@
 /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/rebuild_cache.dir
 /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/edit_cache.dir
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/wsfeatures_class_test.dir
 /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/simple_test.dir
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/config.dir
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/modbus.dir
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/WeatherStation.dir
 /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/TestClass.dir

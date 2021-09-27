@@ -17,4 +17,18 @@ int main()
         fprintf(stderr, "Unable to create the libmodbus context\n");
         return -1;
     }
+    modbus_set_slave(mb, 1);
+
+if (modbus_connect(mb) == -1) {
+    fprintf(stderr, "Connection failed: %s\n", modbus_strerror(errno));
+    modbus_free(mb);
+    return -1;
+}
+  /* Read 5 registers from the address 0 */
+  if (modbus_read_registers(mb, 5004, 2, tab_reg) > 0)
+    std::cout << tab_reg[0] << " " << tab_reg[1] << std::endl;
+  else
+    std::cout << "Error Reading data " << std::endl;
+  modbus_close(mb);
+  modbus_free(mb);
 }

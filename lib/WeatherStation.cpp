@@ -7,8 +7,8 @@
 
 #include "WeatherStation.h"
 
-WeatherStation::WeatherStation(std::string port_address, int baud_rate, char parity, int data_bit, int stop_bit, int slave_id)
-    : port_address{port_address}, baud_rate{baud_rate}, parity{parity}, data_bit{data_bit}, stop_bit{stop_bit}, slave_id{slave_id}
+WeatherStation::WeatherStation(std::string port_address_, int baud_rate_, char parity_, int data_bit_, int stop_bit_, int slave_id_)
+    : port_address{port_address_}, baud_rate{baud_rate_}, parity{parity_}, data_bit{data_bit_}, stop_bit{stop_bit_}, slave_id{slave_id_}
 {
     // Converting port_address to char array
     int n = port_address.length();
@@ -34,8 +34,8 @@ WeatherStation::WeatherStation(std::string port_address, int baud_rate, char par
     }
 }
 
-WeatherStation::WeatherStation(std::string ip_address, int port_no, int slave_id)
-    : ip_address{ip_address}, port_no {port_no}, slave_id{slave_id}
+WeatherStation::WeatherStation(std::string ip_address_, int port_no_, int slave_id_)
+    : ip_address{ip_address_}, port_no {port_no_}, slave_id{slave_id_}
 {
     // Converting port_address to char array
     int n = ip_address.length();
@@ -45,7 +45,6 @@ WeatherStation::WeatherStation(std::string ip_address, int port_no, int slave_id
     // Creating new connection
     mb = modbus_new_tcp(ip_address_char, port_no);
     
-
     modbus_connect(mb);
     if (mb == NULL)
     {

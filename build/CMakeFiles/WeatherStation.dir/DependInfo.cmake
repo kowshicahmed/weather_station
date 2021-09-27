@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kowshicahmed/WS_Project/weather_station/lib/TestClass.cpp" "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/TestClass.dir/lib/TestClass.cpp.o"
+  "/home/kowshicahmed/WS_Project/weather_station/lib/WeatherStation.cpp" "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/WeatherStation.dir/lib/WeatherStation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

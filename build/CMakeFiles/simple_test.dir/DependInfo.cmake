@@ -10,13 +10,15 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../lib"
+  "../lib,"
+  "../dependencies/libmodbus,"
   "/usr/include/modbusepsi"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/TestClass.dir/DependInfo.cmake"
+  "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/modbus.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

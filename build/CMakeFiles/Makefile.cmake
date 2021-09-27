@@ -45,6 +45,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/wsfeatures_class_test.dir/DependInfo.cmake"
   "CMakeFiles/simple_test.dir/DependInfo.cmake"
+  "CMakeFiles/config.dir/DependInfo.cmake"
+  "CMakeFiles/modbus.dir/DependInfo.cmake"
+  "CMakeFiles/WeatherStation.dir/DependInfo.cmake"
   "CMakeFiles/TestClass.dir/DependInfo.cmake"
   )

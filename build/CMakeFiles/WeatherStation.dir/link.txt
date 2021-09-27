@@ -1,0 +1,2 @@
+/usr/bin/ar qc libWeatherStation.a  CMakeFiles/WeatherStation.dir/lib/WeatherStation.cpp.o
+/usr/bin/ranlib libWeatherStation.a

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kowshicahmed/WS_Project/weather_station/lib/TestClass.cpp" "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/TestClass.dir/lib/TestClass.cpp.o"
+  "/home/kowshicahmed/WS_Project/weather_station/test/wsfeatures_class_test.cpp" "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/wsfeatures_class_test.dir/test/wsfeatures_class_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,6 +17,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/WeatherStation.dir/DependInfo.cmake"
+  "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/modbus.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

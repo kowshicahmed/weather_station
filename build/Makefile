@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named wsfeatures_class_test
+
+# Build rule for target.
+wsfeatures_class_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wsfeatures_class_test
+.PHONY : wsfeatures_class_test
+
+# fast build rule for target.
+wsfeatures_class_test/fast:
+	$(MAKE) -f CMakeFiles/wsfeatures_class_test.dir/build.make CMakeFiles/wsfeatures_class_test.dir/build
+.PHONY : wsfeatures_class_test/fast
+
+#=============================================================================
 # Target rules for targets named simple_test
 
 # Build rule for target.
@@ -124,6 +137,45 @@ simple_test/fast:
 .PHONY : simple_test/fast
 
 #=============================================================================
+# Target rules for targets named config
+
+# Build rule for target.
+config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 config
+.PHONY : config
+
+# fast build rule for target.
+config/fast:
+	$(MAKE) -f CMakeFiles/config.dir/build.make CMakeFiles/config.dir/build
+.PHONY : config/fast
+
+#=============================================================================
+# Target rules for targets named modbus
+
+# Build rule for target.
+modbus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 modbus
+.PHONY : modbus
+
+# fast build rule for target.
+modbus/fast:
+	$(MAKE) -f CMakeFiles/modbus.dir/build.make CMakeFiles/modbus.dir/build
+.PHONY : modbus/fast
+
+#=============================================================================
+# Target rules for targets named WeatherStation
+
+# Build rule for target.
+WeatherStation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WeatherStation
+.PHONY : WeatherStation
+
+# fast build rule for target.
+WeatherStation/fast:
+	$(MAKE) -f CMakeFiles/WeatherStation.dir/build.make CMakeFiles/WeatherStation.dir/build
+.PHONY : WeatherStation/fast
+
+#=============================================================================
 # Target rules for targets named TestClass
 
 # Build rule for target.
@@ -135,6 +187,33 @@ TestClass: cmake_check_build_system
 TestClass/fast:
 	$(MAKE) -f CMakeFiles/TestClass.dir/build.make CMakeFiles/TestClass.dir/build
 .PHONY : TestClass/fast
+
+dependencies/libmodbus/src/modbus.o: dependencies/libmodbus/src/modbus.c.o
+
+.PHONY : dependencies/libmodbus/src/modbus.o
+
+# target to build an object file
+dependencies/libmodbus/src/modbus.c.o:
+	$(MAKE) -f CMakeFiles/modbus.dir/build.make CMakeFiles/modbus.dir/dependencies/libmodbus/src/modbus.c.o
+.PHONY : dependencies/libmodbus/src/modbus.c.o
+
+dependencies/libmodbus/src/modbus.i: dependencies/libmodbus/src/modbus.c.i
+
+.PHONY : dependencies/libmodbus/src/modbus.i
+
+# target to preprocess a source file
+dependencies/libmodbus/src/modbus.c.i:
+	$(MAKE) -f CMakeFiles/modbus.dir/build.make CMakeFiles/modbus.dir/dependencies/libmodbus/src/modbus.c.i
+.PHONY : dependencies/libmodbus/src/modbus.c.i
+
+dependencies/libmodbus/src/modbus.s: dependencies/libmodbus/src/modbus.c.s
+
+.PHONY : dependencies/libmodbus/src/modbus.s
+
+# target to generate assembly for a file
+dependencies/libmodbus/src/modbus.c.s:
+	$(MAKE) -f CMakeFiles/modbus.dir/build.make CMakeFiles/modbus.dir/dependencies/libmodbus/src/modbus.c.s
+.PHONY : dependencies/libmodbus/src/modbus.c.s
 
 lib/TestClass.o: lib/TestClass.cpp.o
 
@@ -163,6 +242,33 @@ lib/TestClass.cpp.s:
 	$(MAKE) -f CMakeFiles/TestClass.dir/build.make CMakeFiles/TestClass.dir/lib/TestClass.cpp.s
 .PHONY : lib/TestClass.cpp.s
 
+lib/WeatherStation.o: lib/WeatherStation.cpp.o
+
+.PHONY : lib/WeatherStation.o
+
+# target to build an object file
+lib/WeatherStation.cpp.o:
+	$(MAKE) -f CMakeFiles/WeatherStation.dir/build.make CMakeFiles/WeatherStation.dir/lib/WeatherStation.cpp.o
+.PHONY : lib/WeatherStation.cpp.o
+
+lib/WeatherStation.i: lib/WeatherStation.cpp.i
+
+.PHONY : lib/WeatherStation.i
+
+# target to preprocess a source file
+lib/WeatherStation.cpp.i:
+	$(MAKE) -f CMakeFiles/WeatherStation.dir/build.make CMakeFiles/WeatherStation.dir/lib/WeatherStation.cpp.i
+.PHONY : lib/WeatherStation.cpp.i
+
+lib/WeatherStation.s: lib/WeatherStation.cpp.s
+
+.PHONY : lib/WeatherStation.s
+
+# target to generate assembly for a file
+lib/WeatherStation.cpp.s:
+	$(MAKE) -f CMakeFiles/WeatherStation.dir/build.make CMakeFiles/WeatherStation.dir/lib/WeatherStation.cpp.s
+.PHONY : lib/WeatherStation.cpp.s
+
 test/simple_test.o: test/simple_test.cpp.o
 
 .PHONY : test/simple_test.o
@@ -190,6 +296,33 @@ test/simple_test.cpp.s:
 	$(MAKE) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/test/simple_test.cpp.s
 .PHONY : test/simple_test.cpp.s
 
+test/wsfeatures_class_test.o: test/wsfeatures_class_test.cpp.o
+
+.PHONY : test/wsfeatures_class_test.o
+
+# target to build an object file
+test/wsfeatures_class_test.cpp.o:
+	$(MAKE) -f CMakeFiles/wsfeatures_class_test.dir/build.make CMakeFiles/wsfeatures_class_test.dir/test/wsfeatures_class_test.cpp.o
+.PHONY : test/wsfeatures_class_test.cpp.o
+
+test/wsfeatures_class_test.i: test/wsfeatures_class_test.cpp.i
+
+.PHONY : test/wsfeatures_class_test.i
+
+# target to preprocess a source file
+test/wsfeatures_class_test.cpp.i:
+	$(MAKE) -f CMakeFiles/wsfeatures_class_test.dir/build.make CMakeFiles/wsfeatures_class_test.dir/test/wsfeatures_class_test.cpp.i
+.PHONY : test/wsfeatures_class_test.cpp.i
+
+test/wsfeatures_class_test.s: test/wsfeatures_class_test.cpp.s
+
+.PHONY : test/wsfeatures_class_test.s
+
+# target to generate assembly for a file
+test/wsfeatures_class_test.cpp.s:
+	$(MAKE) -f CMakeFiles/wsfeatures_class_test.dir/build.make CMakeFiles/wsfeatures_class_test.dir/test/wsfeatures_class_test.cpp.s
+.PHONY : test/wsfeatures_class_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,14 +331,27 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... wsfeatures_class_test"
 	@echo "... simple_test"
+	@echo "... config"
+	@echo "... modbus"
+	@echo "... WeatherStation"
 	@echo "... TestClass"
+	@echo "... dependencies/libmodbus/src/modbus.o"
+	@echo "... dependencies/libmodbus/src/modbus.i"
+	@echo "... dependencies/libmodbus/src/modbus.s"
 	@echo "... lib/TestClass.o"
 	@echo "... lib/TestClass.i"
 	@echo "... lib/TestClass.s"
+	@echo "... lib/WeatherStation.o"
+	@echo "... lib/WeatherStation.i"
+	@echo "... lib/WeatherStation.s"
 	@echo "... test/simple_test.o"
 	@echo "... test/simple_test.i"
 	@echo "... test/simple_test.s"
+	@echo "... test/wsfeatures_class_test.o"
+	@echo "... test/wsfeatures_class_test.i"
+	@echo "... test/wsfeatures_class_test.s"
 .PHONY : help
 
 
