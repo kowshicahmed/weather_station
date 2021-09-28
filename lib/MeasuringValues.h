@@ -34,5 +34,7 @@ public:
     MeasuringValues (std::shared_ptr<modbus_t *> mb_);
     void getAirTemp();
     void getRelHumidity();
+    void getAbsHumidity();
+    void getAbsAirPressure();
 
 };

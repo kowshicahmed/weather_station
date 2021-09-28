@@ -9,6 +9,8 @@ int main ()
     connection_1.read_relative_humidity();
     connection_1.readMeasuringValues()->getAirTemp();
     connection_1.readMeasuringValues()->getRelHumidity();
+    connection_1.readMeasuringValues()->getAbsHumidity();
+    connection_1.readMeasuringValues()->getAbsAirPressure();
 
 
     

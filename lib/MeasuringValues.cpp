@@ -26,3 +26,19 @@ void MeasuringValues::getRelHumidity()
     else
         std::cout << "Error Reading data " << std::endl;
 }
+
+void MeasuringValues::getAbsHumidity()
+{
+    if (modbus_read_input_registers(*mb, 602, 2, tab_reg) == 2)
+        std::cout << "Abs Hum: " << tab_reg[0] << " " << tab_reg[1] << std::endl;
+    else
+        std::cout << "Error Reading data " << std::endl;
+}
+
+void MeasuringValues::getAbsAirPressure()
+{
+    if (modbus_read_input_registers(*mb, 800, 2, tab_reg) == 2)
+        std::cout << "Absolute Air pressure: " << tab_reg[0] << " " << tab_reg[1] << std::endl;
+    else
+        std::cout << "Error Reading data " << std::endl;
+}
