@@ -7,6 +7,7 @@
 #pragma once
 #include "modbus.h"
 #include <iostream>
+#include <memory>
 
 /**
  * Measuring Values (Input Register)
@@ -22,11 +23,16 @@
 class MeasuringValues
 {
 private:
+    static constexpr int input_reg_start_addr = 3001;
     static constexpr int wind_speed_addr = 30001;
+    static constexpr int air_temp_addr = 30401;
     static constexpr int no_of_reg = 2;
+    std::shared_ptr<modbus_t *> mb;
     uint16_t tab_reg[2];
 
 public:
-    void getWindSpeed(modbus_t *mb, int start_addr, int reg_amount, uint16_t storage []);
+    MeasuringValues (std::shared_ptr<modbus_t *> mb_);
+    void getAirTemp();
+    void getRelHumidity();
 
 };

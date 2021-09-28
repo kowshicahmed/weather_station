@@ -16,22 +16,25 @@ WeatherStation::WeatherStation(std::string port_address_, int baud_rate_, char p
     strcpy(port_address_char, port_address.c_str());
 
     // Creating new connection
-    mb = modbus_new_rtu(port_address_char, baud_rate, parity, data_bit, stop_bit);
-    
+    mb = std::make_shared<modbus_t *>();
+    *mb = modbus_new_rtu(port_address_char, baud_rate, parity, data_bit, stop_bit);
 
-    modbus_connect(mb);
-    if (mb == NULL)
+    modbus_connect(*mb);
+    if (*mb == NULL)
     {
         fprintf(stderr, "Unable to create the libmodbus context\n");
     }
 
-    modbus_set_slave(mb, slave_id);
+    modbus_set_slave(*mb, slave_id);
 
-    if (modbus_connect(mb) == -1)
+    if (modbus_connect(*mb) == -1)
     {
         fprintf(stderr, "Connection failed: %s\n", modbus_strerror(errno));
-        modbus_free(mb);
+        modbus_free(*mb);
     }
+    
+    // Composition with the MeasuringValues class
+    read_input_reg = std::make_shared<MeasuringValues>(mb);
 }
 
 WeatherStation::WeatherStation(std::string ip_address_, int port_no_, int slave_id_)
@@ -43,33 +46,64 @@ WeatherStation::WeatherStation(std::string ip_address_, int port_no_, int slave_
     strcpy(ip_address_char, port_address.c_str());
 
     // Creating new connection
-    mb = modbus_new_tcp(ip_address_char, port_no);
+    *mb = modbus_new_tcp(ip_address_char, port_no);
     
-    modbus_connect(mb);
+    modbus_connect(*mb);
     if (mb == NULL)
     {
         fprintf(stderr, "Unable to create the libmodbus context\n");
     }
 
-    modbus_set_slave(mb, slave_id);
+    modbus_set_slave(*mb, slave_id);
 
-    if (modbus_connect(mb) == -1)
+    if (modbus_connect(*mb) == -1)
     {
         fprintf(stderr, "Connection failed: %s\n", modbus_strerror(errno));
-        modbus_free(mb);
+        modbus_free(*mb);
     }
+
+    // Composition with the MeasuringValues class
+    read_input_reg = std::make_shared<MeasuringValues>(mb);
 }
+
+WeatherStation::WeatherStation(const WeatherStation &source)
+{
+    mb = std::make_shared<modbus_t *>();
+    *mb = *source.mb;
+}
+
 
 WeatherStation::~WeatherStation()
 {
-    modbus_close(mb);
-    modbus_free(mb);
+    modbus_close(*mb);
+    modbus_free(*mb);
 }
 
 void WeatherStation::read_software_version()
 {
-    if (modbus_read_registers(mb, 5004, 2, tab_reg) > 0)
+    if (modbus_read_registers(*mb, 5004, 2, tab_reg) > 0)
         std::cout << tab_reg[0] << " " << tab_reg[1] << std::endl;
     else
         std::cout << "Error Reading data " << std::endl;
+}
+
+void WeatherStation::read_air_temperature()
+{
+    if (modbus_read_input_registers(*mb, 400, 2, tab_reg) > 0)
+        std::cout << tab_reg[0] << " " << tab_reg[1] << std::endl;
+    else
+        std::cout << "Error Reading data " << std::endl;
+}
+
+void WeatherStation::read_relative_humidity()
+{
+    if (modbus_read_input_registers(*mb, 600, 2, tab_reg) == 2)
+        std::cout << tab_reg[0] << " " << tab_reg[1] << std::endl;
+    else
+        std::cout << "Error Reading data " << std::endl;
+}
+
+std::shared_ptr<MeasuringValues> WeatherStation::readMeasuringValues()
+{
+    return read_input_reg;
 }
