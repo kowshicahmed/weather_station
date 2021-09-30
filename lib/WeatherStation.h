@@ -68,6 +68,8 @@ public:
      **/
     ~WeatherStation();
 
+    /******************* Helper Functions ************************************/
+
     /**Purpose: Returns the pointer to the composition class (MeasuringValues) to access the functions that read the input regs
      * Return: A pointer to the MeasuringValues class object
      **/
