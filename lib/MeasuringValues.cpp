@@ -13,7 +13,8 @@ MeasuringValues::MeasuringValues (std::shared_ptr<modbus_t *> mb_)
 
 void MeasuringValues::getAirTemp()
 {
-    if (modbus_read_input_registers(*mb, 400, 2, tab_reg) > 0)
+    InputRegisters air = AIR_TEMP_ADDR;
+    if (modbus_read_input_registers(*mb, (air - input_reg_start_addr), no_of_reg, tab_reg) > 0)
         std::cout << "Air Temp: " << tab_reg[0] << " " << tab_reg[1] << std::endl;
     else
         std::cout << "Error Reading data " << std::endl;

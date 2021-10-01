@@ -6,6 +6,7 @@
  */
 #pragma once
 #include "modbus.h"
+#include "InputRegisters.h"
 #include <iostream>
 #include <memory>
 
