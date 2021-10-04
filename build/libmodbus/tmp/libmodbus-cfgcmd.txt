@@ -1,0 +1,1 @@
+cmd='/home/kowshicahmed/WS_Project/weather_station/lib/libmodbus/configure;--srcdir=/home/kowshicahmed/WS_Project/weather_station/lib/libmodbus;--prefix=/home/kowshicahmed/WS_Project/weather_station/build/libmodbus;--enable-static=yes;--disable-shared'

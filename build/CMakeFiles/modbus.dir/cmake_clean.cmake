@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/modbus.dir/dependencies/libmodbus/src/modbus.c.o"
+  "CMakeFiles/modbus.dir/lib/libmodbus/src/modbus.c.o"
+  "CMakeFiles/modbus.dir/lib/libmodbus/src/modbus.c.o.d"
   "libmodbus.a"
   "libmodbus.pdb"
 )

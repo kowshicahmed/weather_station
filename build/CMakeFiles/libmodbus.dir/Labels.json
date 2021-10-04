@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/libmodbus"
+		},
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/libmodbus.rule"
+		},
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/libmodbus-complete.rule"
+		},
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-build.rule"
+		},
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-configure.rule"
+		},
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-download.rule"
+		},
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-install.rule"
+		},
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-mkdir.rule"
+		},
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-patch.rule"
+		},
+		{
+			"file" : "/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"libmodbus"
+		],
+		"name" : "libmodbus"
+	}
+}

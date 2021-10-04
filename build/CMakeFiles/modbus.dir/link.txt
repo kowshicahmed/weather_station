@@ -1,2 +1,2 @@
-/usr/bin/ar qc libmodbus.a  CMakeFiles/modbus.dir/dependencies/libmodbus/src/modbus.c.o
-/usr/bin/ranlib libmodbus.a
+/bin/x86_64-linux-gnu-ar qc libmodbus.a CMakeFiles/modbus.dir/lib/libmodbus/src/modbus.c.o
+/bin/x86_64-linux-gnu-ranlib libmodbus.a

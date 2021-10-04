@@ -1,18 +1,16 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kowshicahmed/WS_Project/weather_station/lib/WeatherStation.cpp" "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/WeatherStation.dir/lib/WeatherStation.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../lib,"
-  "../dependencies/libmodbus,"
-  "/usr/include/modbusepsi"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/kowshicahmed/WS_Project/weather_station/test/modbuslib_test.cpp" "CMakeFiles/WeatherStation.dir/test/modbuslib_test.cpp.o" "gcc" "CMakeFiles/WeatherStation.dir/test/modbuslib_test.cpp.o.d"
+  "/home/kowshicahmed/WS_Project/weather_station/test/simple_test.cpp" "CMakeFiles/WeatherStation.dir/test/simple_test.cpp.o" "gcc" "CMakeFiles/WeatherStation.dir/test/simple_test.cpp.o.d"
+  "/home/kowshicahmed/WS_Project/weather_station/test/wsfeatures_class_test.cpp" "CMakeFiles/WeatherStation.dir/test/wsfeatures_class_test.cpp.o" "gcc" "CMakeFiles/WeatherStation.dir/test/wsfeatures_class_test.cpp.o.d"
   )
 
 # Targets to which this target links.

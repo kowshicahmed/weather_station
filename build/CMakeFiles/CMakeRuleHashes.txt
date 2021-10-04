@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+e47ca4a11c00690897976f5ede3fa6bc CMakeFiles/libmodbus
+822efe6f9328068c06a866f5251046de CMakeFiles/libmodbus-complete
+d6a4b1d0cc0c6e877e804215e072a1d1 libmodbus/src/libmodbus-stamp/libmodbus-build
+7cd43690f3822b6efa61b0f297cfaf8f libmodbus/src/libmodbus-stamp/libmodbus-configure
+427f95805f602afd1d1505d4a18b7f28 libmodbus/src/libmodbus-stamp/libmodbus-download
+85bd7af879b30ddb353af2ae27228b62 libmodbus/src/libmodbus-stamp/libmodbus-install
+c7bb46ac0a5d7524813f689accc19d29 libmodbus/src/libmodbus-stamp/libmodbus-mkdir
+f0117d2912cb6c9982882392648a092c libmodbus/src/libmodbus-stamp/libmodbus-patch
+f3ef4bc90b87cf7f8c1cc3e5fb237777 libmodbus/src/libmodbus-stamp/libmodbus-update

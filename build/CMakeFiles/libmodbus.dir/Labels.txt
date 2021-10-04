@@ -1,0 +1,13 @@
+# Target labels
+ libmodbus
+# Source files and their labels
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/libmodbus
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/libmodbus.rule
+/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/libmodbus-complete.rule
+/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-build.rule
+/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-configure.rule
+/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-download.rule
+/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-install.rule
+/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-mkdir.rule
+/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-patch.rule
+/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/src/libmodbus-stamp/libmodbus-update.rule

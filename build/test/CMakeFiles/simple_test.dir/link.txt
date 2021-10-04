@@ -1,0 +1,1 @@
+/bin/x86_64-linux-gnu-g++-9 -g CMakeFiles/simple_test.dir/simple_test.cpp.o -o simple_test  ../src/libTestClass.a ../libmodbus/lib/libmodbus.a 

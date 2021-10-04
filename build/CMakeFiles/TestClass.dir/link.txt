@@ -1,2 +1,2 @@
-/usr/bin/ar qc libTestClass.a  CMakeFiles/TestClass.dir/lib/TestClass.cpp.o
-/usr/bin/ranlib libTestClass.a
+/bin/x86_64-linux-gnu-ar qc libTestClass.a CMakeFiles/TestClass.dir/src/TestClass.cpp.o
+/bin/x86_64-linux-gnu-ranlib libTestClass.a

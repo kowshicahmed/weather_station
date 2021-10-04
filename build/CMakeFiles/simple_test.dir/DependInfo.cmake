@@ -1,24 +1,19 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kowshicahmed/WS_Project/weather_station/test/simple_test.cpp" "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/simple_test.dir/test/simple_test.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../lib,"
-  "../dependencies/libmodbus,"
-  "/usr/include/modbusepsi"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/kowshicahmed/WS_Project/weather_station/test/simple_test.cpp" "CMakeFiles/simple_test.dir/test/simple_test.cpp.o" "gcc" "CMakeFiles/simple_test.dir/test/simple_test.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/TestClass.dir/DependInfo.cmake"
-  "/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles/modbus.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

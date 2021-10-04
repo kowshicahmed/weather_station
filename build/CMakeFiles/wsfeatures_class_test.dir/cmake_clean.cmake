@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/wsfeatures_class_test.dir/test/wsfeatures_class_test.cpp.o"
+  "CMakeFiles/wsfeatures_class_test.dir/test/wsfeatures_class_test.cpp.o.d"
   "wsfeatures_class_test"
   "wsfeatures_class_test.pdb"
 )
