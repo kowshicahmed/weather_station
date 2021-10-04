@@ -3,4 +3,5 @@ add_executable(wsfeatures_class_test wsfeatures_class_test.cpp)
 add_executable(modbuslib_test modbuslib_test.cpp)
 
 target_link_libraries(simple_test PRIVATE TestClass modbus)
-target_link_libraries(wsfeatures_class_test PRIVATE WeatherStation modbus)
+target_link_libraries(wsfeatures_class_test PRIVATE WeatherStation MeasuringValues modbus)
+target_link_libraries(modbuslib_test PRIVATE modbus)

@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /home/kowshicahmed/WS_Project/weather_station/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -84,6 +74,16 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,6 +117,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/TestClass.dir/rule:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/TestClass.dir/rule
+.PHONY : src/CMakeFiles/TestClass.dir/rule
+
+# Convenience name for target.
+TestClass: src/CMakeFiles/TestClass.dir/rule
+.PHONY : TestClass
+
+# fast build rule for target.
+TestClass/fast:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/build
+.PHONY : TestClass/fast
+
+# Convenience name for target.
 src/CMakeFiles/WeatherStation.dir/rule:
 	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/WeatherStation.dir/rule
 .PHONY : src/CMakeFiles/WeatherStation.dir/rule
@@ -131,18 +145,42 @@ WeatherStation/fast:
 .PHONY : WeatherStation/fast
 
 # Convenience name for target.
-src/CMakeFiles/TestClass.dir/rule:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/TestClass.dir/rule
-.PHONY : src/CMakeFiles/TestClass.dir/rule
+src/CMakeFiles/MeasuringValues.dir/rule:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/MeasuringValues.dir/rule
+.PHONY : src/CMakeFiles/MeasuringValues.dir/rule
 
 # Convenience name for target.
-TestClass: src/CMakeFiles/TestClass.dir/rule
-.PHONY : TestClass
+MeasuringValues: src/CMakeFiles/MeasuringValues.dir/rule
+.PHONY : MeasuringValues
 
 # fast build rule for target.
-TestClass/fast:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/build
-.PHONY : TestClass/fast
+MeasuringValues/fast:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/build
+.PHONY : MeasuringValues/fast
+
+MeasuringValues.o: MeasuringValues.cpp.o
+.PHONY : MeasuringValues.o
+
+# target to build an object file
+MeasuringValues.cpp.o:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o
+.PHONY : MeasuringValues.cpp.o
+
+MeasuringValues.i: MeasuringValues.cpp.i
+.PHONY : MeasuringValues.i
+
+# target to preprocess a source file
+MeasuringValues.cpp.i:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.i
+.PHONY : MeasuringValues.cpp.i
+
+MeasuringValues.s: MeasuringValues.cpp.s
+.PHONY : MeasuringValues.s
+
+# target to generate assembly for a file
+MeasuringValues.cpp.s:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.s
+.PHONY : MeasuringValues.cpp.s
 
 TestClass.o: TestClass.cpp.o
 .PHONY : TestClass.o
@@ -200,8 +238,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... MeasuringValues"
 	@echo "... TestClass"
 	@echo "... WeatherStation"
+	@echo "... MeasuringValues.o"
+	@echo "... MeasuringValues.i"
+	@echo "... MeasuringValues.s"
 	@echo "... TestClass.o"
 	@echo "... TestClass.i"
 	@echo "... TestClass.s"

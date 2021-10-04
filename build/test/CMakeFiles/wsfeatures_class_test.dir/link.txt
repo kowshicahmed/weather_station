@@ -1,1 +1,1 @@
-/bin/x86_64-linux-gnu-g++-9 -g CMakeFiles/wsfeatures_class_test.dir/wsfeatures_class_test.cpp.o -o wsfeatures_class_test  ../src/libWeatherStation.a ../libmodbus/lib/libmodbus.a 
+/bin/x86_64-linux-gnu-g++-9 -g CMakeFiles/wsfeatures_class_test.dir/wsfeatures_class_test.cpp.o -o wsfeatures_class_test  ../src/libWeatherStation.a ../src/libMeasuringValues.a ../libmodbus/lib/libmodbus.a 

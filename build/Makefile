@@ -130,6 +130,19 @@ libmodbus/fast:
 .PHONY : libmodbus/fast
 
 #=============================================================================
+# Target rules for targets named TestClass
+
+# Build rule for target.
+TestClass: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestClass
+.PHONY : TestClass
+
+# fast build rule for target.
+TestClass/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/build
+.PHONY : TestClass/fast
+
+#=============================================================================
 # Target rules for targets named WeatherStation
 
 # Build rule for target.
@@ -143,17 +156,17 @@ WeatherStation/fast:
 .PHONY : WeatherStation/fast
 
 #=============================================================================
-# Target rules for targets named TestClass
+# Target rules for targets named MeasuringValues
 
 # Build rule for target.
-TestClass: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestClass
-.PHONY : TestClass
+MeasuringValues: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MeasuringValues
+.PHONY : MeasuringValues
 
 # fast build rule for target.
-TestClass/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/build
-.PHONY : TestClass/fast
+MeasuringValues/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/build
+.PHONY : MeasuringValues/fast
 
 #=============================================================================
 # Target rules for targets named simple_test
@@ -203,6 +216,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... libmodbus"
+	@echo "... MeasuringValues"
 	@echo "... TestClass"
 	@echo "... WeatherStation"
 	@echo "... modbuslib_test"

@@ -20,7 +20,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -36,7 +36,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				},
 				{
@@ -51,9 +52,9 @@
 					"source" : "test",
 					"targetIndexes" : 
 					[
-						3,
 						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -75,7 +76,8 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -83,15 +85,22 @@
 			[
 				{
 					"directoryIndex" : 1,
+					"id" : "MeasuringValues::@145eef247bfb46b6828c",
+					"jsonFile" : "target-MeasuringValues-Debug-b75c896c6344621b38d8.json",
+					"name" : "MeasuringValues",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
 					"id" : "TestClass::@145eef247bfb46b6828c",
-					"jsonFile" : "target-TestClass-Debug-6f07e84808fa1851b321.json",
+					"jsonFile" : "target-TestClass-Debug-d162a64933f020032919.json",
 					"name" : "TestClass",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "WeatherStation::@145eef247bfb46b6828c",
-					"jsonFile" : "target-WeatherStation-Debug-af49a9efd29ca76fdc54.json",
+					"jsonFile" : "target-WeatherStation-Debug-425589bf3caba32f523a.json",
 					"name" : "WeatherStation",
 					"projectIndex" : 0
 				},
@@ -105,7 +114,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "modbuslib_test::@36f028580bb02cc8272a",
-					"jsonFile" : "target-modbuslib_test-Debug-f009a53c8be47befaab9.json",
+					"jsonFile" : "target-modbuslib_test-Debug-a924780373b57c4f0eee.json",
 					"name" : "modbuslib_test",
 					"projectIndex" : 0
 				},
@@ -119,7 +128,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "wsfeatures_class_test::@36f028580bb02cc8272a",
-					"jsonFile" : "target-wsfeatures_class_test-Debug-cd0a628b2bcc339dfb8a.json",
+					"jsonFile" : "target-wsfeatures_class_test-Debug-84f6744a8d9b421f5ae8.json",
 					"name" : "wsfeatures_class_test",
 					"projectIndex" : 0
 				}

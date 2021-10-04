@@ -93,6 +93,7 @@ wsfeatures_class_test_EXTERNAL_OBJECTS =
 test/wsfeatures_class_test: test/CMakeFiles/wsfeatures_class_test.dir/wsfeatures_class_test.cpp.o
 test/wsfeatures_class_test: test/CMakeFiles/wsfeatures_class_test.dir/build.make
 test/wsfeatures_class_test: src/libWeatherStation.a
+test/wsfeatures_class_test: src/libMeasuringValues.a
 test/wsfeatures_class_test: libmodbus/lib/libmodbus.a
 test/wsfeatures_class_test: test/CMakeFiles/wsfeatures_class_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable wsfeatures_class_test"
