@@ -4,7 +4,7 @@
 # compile CXX with /bin/x86_64-linux-gnu-g++-9
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kowshicahmed/WS_Project/weather_station/src/../include -I/usr/include/modbusepsi -I/home/kowshicahmed/WS_Project/weather_station/include -isystem /home/kowshicahmed/WS_Project/weather_station/build/libmodbus/include
+CXX_INCLUDES = -I/home/kowshicahmed/WS_Project/weather_station/src/../include -I/home/kowshicahmed/WS_Project/weather_station/include -isystem /home/kowshicahmed/WS_Project/weather_station/build/libmodbus/include
 
 CXX_FLAGS = -g
 

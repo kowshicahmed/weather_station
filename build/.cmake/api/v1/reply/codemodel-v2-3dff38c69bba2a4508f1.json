@@ -1,0 +1,140 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "test",
+					"jsonFile" : "directory-test-Debug-451c0598f41488bb20b9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "WeatherStation",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "TestClass::@145eef247bfb46b6828c",
+					"jsonFile" : "target-TestClass-Debug-6f07e84808fa1851b321.json",
+					"name" : "TestClass",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "WeatherStation::@145eef247bfb46b6828c",
+					"jsonFile" : "target-WeatherStation-Debug-af49a9efd29ca76fdc54.json",
+					"name" : "WeatherStation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "libmodbus::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-libmodbus-Debug-1aa643480cfaf5a2d3e9.json",
+					"name" : "libmodbus",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "modbuslib_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-modbuslib_test-Debug-f009a53c8be47befaab9.json",
+					"name" : "modbuslib_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "simple_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-simple_test-Debug-5fa7cf173055af8356c8.json",
+					"name" : "simple_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "wsfeatures_class_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-wsfeatures_class_test-Debug-cd0a628b2bcc339dfb8a.json",
+					"name" : "wsfeatures_class_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kowshicahmed/WS_Project/weather_station/build",
+		"source" : "/home/kowshicahmed/WS_Project/weather_station"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
