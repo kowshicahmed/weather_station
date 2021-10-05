@@ -1,5 +1,5 @@
-src/CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o: \
- /home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp \
+test/CMakeFiles/wsfeatures_class_test.dir/wsfeatures_class_test.cpp.o: \
+ /home/kowshicahmed/WS_Project/weather_station/test/wsfeatures_class_test.cpp \
  /usr/include/stdc-predef.h \
  /home/kowshicahmed/WS_Project/weather_station/src/../include/WeatherStation.h \
  /usr/include/modbus/modbus.h /usr/include/x86_64-linux-gnu/sys/param.h \

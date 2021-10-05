@@ -25,21 +25,22 @@
 class MeasuringValues
 {
 private:
-    static constexpr int REG_START_ADDR = 30001;      // Start adress of Input registers
-    static constexpr int REGS_TO_READ = 2;
-    static constexpr int MODBUS_REG_LENGTH = 16;
+    static constexpr int INPUT_REG_START_ADDR = 30001; // Start adress of Input registers
+    static constexpr int REGS_TO_READ = 2;             // A Measuring value is consisted of two 16 bit registers
+    static constexpr int MODBUS_REG_LENGTH = 16;       // A register length is 16 bits
 
-    std::shared_ptr<modbus_t *> mb;
-    uint16_t tab_reg[2];
-    std::vector <int16_t> signed_data;
-    std::vector <uint16_t> unsigned_data;
+    std::shared_ptr<modbus_t *> mb;                    // Modbus context pointer passed by the WeatherStation class
+    
+    uint16_t register_data[2];                         // The data of two 16 bit registers of a particular Measuring value is stored here
+    
 
 public:
     MeasuringValues (std::shared_ptr<modbus_t *> mb_);
+    int32_t readInputReg(InputRegisters reg_addr);
     void getAirTemp();
     void getRelHumidity();
     void getAbsHumidity();
     void getAbsAirPressure();
-    int32_t readInputReg(InputRegisters reg_addr);
+    
 
 };
