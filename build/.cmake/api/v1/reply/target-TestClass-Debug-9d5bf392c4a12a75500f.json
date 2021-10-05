@@ -51,6 +51,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/home/kowshicahmed/WS_Project/weather_station/src/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/usr/include/modbusepsi"
 				}
 			],
 			"language" : "CXX",

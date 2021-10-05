@@ -14,7 +14,7 @@ MeasuringValues::MeasuringValues (std::shared_ptr<modbus_t *> mb_)
 void MeasuringValues::getAirTemp()
 {
     InputRegisters air = AIR_TEMP_ADDR;
-    if (modbus_read_input_registers(*mb, (air - input_reg_start_addr), no_of_reg, tab_reg) > 0)
+    if (modbus_read_input_registers(*mb, (air - REG_START_ADDR), REGS_TO_READ, tab_reg) > 0)
         std::cout << "Air Temp: " << tab_reg[0] << " " << tab_reg[1] << std::endl;
     else
         std::cout << "Error Reading data " << std::endl;
@@ -42,4 +42,14 @@ void MeasuringValues::getAbsAirPressure()
         std::cout << "Absolute Air pressure: " << tab_reg[0] << " " << tab_reg[1] << std::endl;
     else
         std::cout << "Error Reading data " << std::endl;
+}
+
+int32_t MeasuringValues::readInputReg(InputRegisters reg_addr)
+{
+    if (modbus_read_input_registers(*mb, (reg_addr - REG_START_ADDR), REGS_TO_READ, tab_reg) == 2)
+        std::cout << "Absolute Air pressure: " << tab_reg[0] << " " << tab_reg[1] << std::endl;
+    else
+        std::cout << "Error Reading data " << std::endl;
+    int32_t data = (tab_reg[0] << MODBUS_REG_LENGTH) | (tab_reg[1]);
+    return data;
 }

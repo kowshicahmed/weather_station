@@ -64,7 +64,10 @@
 			"thread": "cpp",
 			"cinttypes": "cpp",
 			"typeinfo": "cpp",
-			"config.h": "c"
+			"config.h": "c",
+			"compare": "cpp",
+			"concepts": "cpp",
+			"ranges": "cpp"
 		}
 	}
 }

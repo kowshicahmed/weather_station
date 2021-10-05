@@ -5,7 +5,7 @@
  *      Author: Kowshic Ahmed Akash
  */
 #pragma once
-#include "/usr/include/modbusepsi/modbus.h"
+#include "/usr/include/modbus/modbus.h"
 #include <string>
 #include <cstring>
 #include <iostream>

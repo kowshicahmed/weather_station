@@ -1,6 +1,6 @@
 #include <iostream>
 #include "TestClass.h"
-#include "/usr/include/modbusepsi/modbus.h"
+#include "/usr/include/modbus/modbus.h"
 
 int main()
 {
