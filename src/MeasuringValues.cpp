@@ -13,10 +13,12 @@ MeasuringValues::MeasuringValues (std::shared_ptr<modbus_t *> mb_)
 
 int32_t MeasuringValues::readInputReg(InputRegisters reg_addr)
 {
-    if (modbus_read_input_registers(*mb, (reg_addr - INPUT_REG_START_ADDR), REGS_TO_READ, register_data) == 2)
-        std::cout << "Absolute Air pressure: " << register_data[0] << " " << register_data[1] << std::endl;
-    else
-        std::cout << "Error Reading data " << std::endl;
+    if (modbus_read_input_registers(*mb, (reg_addr - INPUT_REG_START_ADDR), REGS_TO_READ, register_data) < REGS_TO_READ)
+    {
+        fprintf(stderr, "Error reading data: %s\n", modbus_strerror(errno));
+        abort();
+        return 0;
+    }
     int32_t data = (register_data[0] << MODBUS_REG_LENGTH) | (register_data[1]);
     return data;
 }

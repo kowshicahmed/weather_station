@@ -14,60 +14,60 @@ WeatherStation::WeatherStation(std::string port_address_, int baud_rate_, char p
     : port_address{port_address_}, baud_rate{baud_rate_}, parity{parity_}, data_bit{data_bit_}, stop_bit{stop_bit_}, slave_id{slave_id_}
 {
     // Converting port_address to char array
-    int n = port_address.length();
-    char port_address_char[n + 1];
-    strcpy(port_address_char, port_address.c_str());
+    char *port_address_char = str_to_char(port_address);
 
     // Creating new connection
     mb = std::make_shared<modbus_t *>();
     *mb = modbus_new_rtu(port_address_char, baud_rate, parity, data_bit, stop_bit);
 
-    modbus_connect(*mb);
-    if (*mb == NULL)
-    {
-        fprintf(stderr, "Unable to create the libmodbus context\n");
-    }
-
-    modbus_set_slave(*mb, slave_id);
-
-    if (modbus_connect(*mb) == -1)
-    {
-        fprintf(stderr, "Connection failed: %s\n", modbus_strerror(errno));
-        modbus_free(*mb);
-    }
+    // Handling modbus connect and slave connection
+    modbus_connect_handler(mb);
 
     // Composition with the MeasuringValues class
-    read_input_reg = std::make_shared<MeasuringValues>(mb);
+    measuring_values_ptr = std::make_shared<MeasuringValues>(mb);
+    delete[] port_address_char;
 }
 
 /******************** Constructor for creating new tcp connection ****************/
 WeatherStation::WeatherStation(std::string ip_address_, int port_no_, int slave_id_)
     : ip_address{ip_address_}, port_no{port_no_}, slave_id{slave_id_}
 {
-    // Converting port_address to char array
-    int n = ip_address.length();
-    char ip_address_char[n + 1];
-    strcpy(ip_address_char, port_address.c_str());
+    // Converting ip_address to char array
+    char *ip_address_char = str_to_char(ip_address);
 
     // Creating new connection
+    mb = std::make_shared<modbus_t *>();
     *mb = modbus_new_tcp(ip_address_char, port_no);
 
-    modbus_connect(*mb);
-    if (mb == NULL)
-    {
-        fprintf(stderr, "Unable to create the libmodbus context\n");
-    }
-
-    modbus_set_slave(*mb, slave_id);
-
-    if (modbus_connect(*mb) == -1)
-    {
-        fprintf(stderr, "Connection failed: %s\n", modbus_strerror(errno));
-        modbus_free(*mb);
-    }
+    // Handling modbus connect and slave connection
+    modbus_connect_handler(mb);
 
     // Composition with the MeasuringValues class
-    read_input_reg = std::make_shared<MeasuringValues>(mb);
+    measuring_values_ptr = std::make_shared<MeasuringValues>(mb);
+    delete[] ip_address_char;
+}
+
+/*************** Constructor for creating a new libmodbus context for TCP Protocol Independent ****************/
+WeatherStation::WeatherStation(std::string node_, std::string service_, int slave_id_)
+    : node{node_}, service{service_}, slave_id{slave_id_}
+{
+    // Converting node to char array
+    char *node_char = str_to_char(node);
+
+    // Converting service to char array
+    char *service_char = str_to_char(service);
+
+    // Creating new connection
+    mb = std::make_shared<modbus_t *>();
+    *mb = modbus_new_tcp_pi(node_char, service_char);
+
+    // Handling modbus connect and slave connection
+    modbus_connect_handler(mb);
+
+    // Composition with the MeasuringValues class
+    measuring_values_ptr = std::make_shared<MeasuringValues>(mb);
+    delete[] node_char;
+    delete[] service_char;
 }
 
 /***************** Copy Constructor *************************/
@@ -89,30 +89,31 @@ WeatherStation::~WeatherStation()
 /****** Returns composition pointer to the read data from input reg class********/
 std::shared_ptr<MeasuringValues> WeatherStation::readMeasuringValues()
 {
-    return read_input_reg;
+    return measuring_values_ptr;
 }
 
-/************** For testing purpose******************/
-void WeatherStation::read_software_version()
+void WeatherStation::modbus_connect_handler(std::shared_ptr<modbus_t *> mb)
 {
-    if (modbus_read_registers(*mb, 5004, 2, tab_reg) > 0)
-        std::cout << tab_reg[0] << " " << tab_reg[1] << std::endl;
-    else
-        std::cout << "Error Reading data " << std::endl;
+    // Testing the connection
+    modbus_connect(*mb);
+    if (*mb == NULL)
+    {
+        fprintf(stderr, "Unable to create the libmodbus context\n");
+    }
+
+    // Creating new slave
+    modbus_set_slave(*mb, slave_id);
+    if (modbus_connect(*mb) == -1)
+    {
+        fprintf(stderr, "Connection failed: %s\n", modbus_strerror(errno));
+        modbus_free(*mb);
+    }
 }
 
-void WeatherStation::read_air_temperature()
+// Converts std::string to char array
+char *WeatherStation::str_to_char(std::string str)
 {
-    if (modbus_read_input_registers(*mb, 400, 2, tab_reg) > 0)
-        std::cout << tab_reg[0] << " " << tab_reg[1] << std::endl;
-    else
-        std::cout << "Error Reading data " << std::endl;
-}
-
-void WeatherStation::read_relative_humidity()
-{
-    if (modbus_read_input_registers(*mb, 600, 2, tab_reg) == 2)
-        std::cout << tab_reg[0] << " " << tab_reg[1] << std::endl;
-    else
-        std::cout << "Error Reading data " << std::endl;
+    char *char_val = new char[str.length() + 1]();
+    strcpy(char_val, str.c_str());
+    return char_val;
 }

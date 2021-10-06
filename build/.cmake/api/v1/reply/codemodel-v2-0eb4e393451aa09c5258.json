@@ -93,7 +93,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "TestClass::@145eef247bfb46b6828c",
-					"jsonFile" : "target-TestClass-Debug-9d5bf392c4a12a75500f.json",
+					"jsonFile" : "target-TestClass-Debug-d162a64933f020032919.json",
 					"name" : "TestClass",
 					"projectIndex" : 0
 				},
@@ -121,7 +121,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "simple_test::@36f028580bb02cc8272a",
-					"jsonFile" : "target-simple_test-Debug-74a7d37761504a4659b2.json",
+					"jsonFile" : "target-simple_test-Debug-5fa7cf173055af8356c8.json",
 					"name" : "simple_test",
 					"projectIndex" : 0
 				},

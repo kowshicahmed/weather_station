@@ -76,10 +76,6 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/usr/include/modbusepsi"
-				},
-				{
-					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "/home/kowshicahmed/WS_Project/weather_station/build/libmodbus/include"
 				}
