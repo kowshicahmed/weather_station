@@ -76,7 +76,7 @@ public:
 
     /**Purpose: Copy constructor
      * Param: &source (a reference to a source object)
-     * Info: Handels the copy of the modbus context pointer
+     * Info: Handles the copy of the modbus context pointer
      **/
     WeatherStation(const WeatherStation &source);
 

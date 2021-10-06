@@ -28,6 +28,9 @@ private:
     static constexpr int INPUT_REG_START_ADDR = 30001; // Start adress of Input registers
     static constexpr int REGS_TO_READ = 2;             // A Measuring value is consisted of two 16 bit registers
     static constexpr int MODBUS_REG_LENGTH = 16;       // A register length is 16 bits
+    static constexpr int MULTIPLIER_10 = 10;
+    static constexpr int MULTIPLIER_100 = 100;
+    static constexpr int MULTIPLIER_1000000 = 1000000;
 
     std::shared_ptr<modbus_t *> mb;                    // Modbus context pointer passed by the WeatherStation class
     
@@ -35,9 +38,31 @@ private:
     
 
 public:
-    MeasuringValues (std::shared_ptr<modbus_t *> mb_);
+    /***************** Constructors and Destructors ****************************/
+
+    /**Purpose: Constructor for Initializing the Modbus context pointer 
+     * Param: std::shared_ptr<modbus_t *> mb_ (Initialized in the constructors of the WeatherStation class)
+     **/
+    MeasuringValues(std::shared_ptr<modbus_t *> mb_);
+
+    /**Purpose: Copy constructor
+     * Param: &source (a reference to a source object)
+     * Info: Handles the copy of the modbus context pointer
+     **/
+    MeasuringValues(const MeasuringValues &source);
+
+    /**Purpose: Destructor
+     * Info: Uses the *modbus_close()* function to close the connection established with the backend set in the context.
+     **/
+    ~MeasuringValues();
+
+    /******************* Helper Functions ************************************/
+
+    /**Purpose: Reads two input registers for a particular measuring value and returns the data in int32_t 
+     * Param: reg_addr(starting address of a measuring value defined in the InputRegisters.h file)
+     **/
     int32_t readInputReg(InputRegisters reg_addr);
-    void getAirTemp();
+    void readAirTemp();
     void getRelHumidity();
     void getAbsHumidity();
     void getAbsAirPressure();

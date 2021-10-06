@@ -6,11 +6,30 @@
  */
 #include "MeasuringValues.h"
 
+/******************************* Constructors and Destructors *********************************************/
+
+/************ Constructor for Initializing the Modbus context pointer *****************/ 
 MeasuringValues::MeasuringValues (std::shared_ptr<modbus_t *> mb_)
     :mb{mb_}
 {
 }
 
+/***************** Copy Constructor *************************/
+MeasuringValues::MeasuringValues(const MeasuringValues &source)
+{
+    mb = std::make_shared<modbus_t *>();
+    *mb = *source.mb;
+}
+
+/***************** Destructor *************************/
+MeasuringValues::~MeasuringValues()
+{
+    modbus_close(*mb);
+}
+
+/******************************* Helper Functions *********************************************/
+
+//Reads two input registers for a particular measuring value and returns the data in 32 bit int32_t
 int32_t MeasuringValues::readInputReg(InputRegisters reg_addr)
 {
     if (modbus_read_input_registers(*mb, (reg_addr - INPUT_REG_START_ADDR), REGS_TO_READ, register_data) < REGS_TO_READ)
@@ -23,13 +42,9 @@ int32_t MeasuringValues::readInputReg(InputRegisters reg_addr)
     return data;
 }
 
-void MeasuringValues::getAirTemp()
+void MeasuringValues::readAirTemp()
 {
-    InputRegisters air = AIR_TEMP_ADDR;
-    if (modbus_read_input_registers(*mb, (air - INPUT_REG_START_ADDR), REGS_TO_READ, register_data) > 0)
-        std::cout << "Air Temp: " << register_data[0] << " " << register_data[1] << std::endl;
-    else
-        std::cout << "Error Reading data " << std::endl;
+    std::cout << readInputReg(AIR_TEMP_ADDR)/MULTIPLIER_10 << std::endl;
 }
 
 void MeasuringValues::getRelHumidity()
