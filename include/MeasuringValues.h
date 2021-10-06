@@ -28,9 +28,9 @@ private:
     static constexpr int INPUT_REG_START_ADDR = 30001; // Start adress of Input registers
     static constexpr int REGS_TO_READ = 2;             // A Measuring value is consisted of two 16 bit registers
     static constexpr int MODBUS_REG_LENGTH = 16;       // A register length is 16 bits
-    static constexpr int MULTIPLIER_10 = 10;
-    static constexpr int MULTIPLIER_100 = 100;
-    static constexpr int MULTIPLIER_1000000 = 1000000;
+    static constexpr float MULTIPLIER_10 = 10.0;
+    static constexpr float MULTIPLIER_100 = 100.0;
+    static constexpr float MULTIPLIER_1000000 = 1000000.0;
 
     std::shared_ptr<modbus_t *> mb;                    // Modbus context pointer passed by the WeatherStation class
     
@@ -62,10 +62,39 @@ public:
      * Param: reg_addr(starting address of a measuring value defined in the InputRegisters.h file)
      **/
     int32_t readInputReg(InputRegisters reg_addr);
-    void readAirTemp();
-    void getRelHumidity();
-    void getAbsHumidity();
-    void getAbsAirPressure();
+    float readWindSpeed();
+    float readMeanWindSpeed();
+    float readWindDirection();
+    float readMeanWindDirection();
+    float readAirTemp();
+    float readInteriorTemp();
+    float readDewPointTemp();
+    float readRelHumidity();
+    float readAbsHumidity();
+    float readAbsAirPressure();
+    float readRelAirPressure();
+    float readGlobalRadiation();
+    float readBrightnessNorth();
+    float readBrightnessEast();
+    float readBrightnessSouth();
+    float readBrightnessWest();
+    float readTwilight();
+    float readPrecipitationStat();
+    float readDate();
+    float readTime();
+    float readTimeFormat();
+    float readLongitude();
+    float readLatitude();
+    float readSunPosElevation();
+    float readSunPosAzimuth();
+    float readHeightAboveSea();
+    float readSensorStat();
+    float readMainLoopCycle();
+    float readSHT2xTemp();
+    float readNTCTemp();
+    float readOperatingTime();
+    float readMeanValHeightGPS();
+    
     
 
 };

@@ -42,31 +42,12 @@ int32_t MeasuringValues::readInputReg(InputRegisters reg_addr)
     return data;
 }
 
-void MeasuringValues::readAirTemp()
+float MeasuringValues::readAirTemp()
 {
-    std::cout << readInputReg(AIR_TEMP_ADDR)/MULTIPLIER_10 << std::endl;
+    return(readInputReg(AIR_TEMP_ADDR)/MULTIPLIER_10);
 }
 
-void MeasuringValues::getRelHumidity()
+float MeasuringValues::readDate()
 {
-    if (modbus_read_input_registers(*mb, 600, 2, register_data) == 2)
-        std::cout << "Relative Hum: " << register_data[0] << " " << register_data[1] << std::endl;
-    else
-        std::cout << "Error Reading data " << std::endl;
-}
-
-void MeasuringValues::getAbsHumidity()
-{
-    if (modbus_read_input_registers(*mb, 602, 2, register_data) == 2)
-        std::cout << "Abs Hum: " << register_data[0] << " " << register_data[1] << std::endl;
-    else
-        std::cout << "Error Reading data " << std::endl;
-}
-
-void MeasuringValues::getAbsAirPressure()
-{
-    if (modbus_read_input_registers(*mb, 800, 2, register_data) == 2)
-        std::cout << "Absolute Air pressure: " << register_data[0] << " " << register_data[1] << std::endl;
-    else
-        std::cout << "Error Reading data " << std::endl;
+    return(readInputReg(DATE_ADDR));
 }
