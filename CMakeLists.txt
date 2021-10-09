@@ -11,6 +11,6 @@ set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 # include(FindPackageHandleStandardArgs)
 # set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
 include(CPack)
-
+#include(modbus.cmake)
 add_subdirectory(lib)
 add_subdirectory(src)

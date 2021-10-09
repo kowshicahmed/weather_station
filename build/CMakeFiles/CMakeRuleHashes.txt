@@ -1,9 +1,10 @@
 # Hashes of file build rules.
-822efe6f9328068c06a866f5251046de CMakeFiles/libmodbus-complete
-d6a4b1d0cc0c6e877e804215e072a1d1 libmodbus/src/libmodbus-stamp/libmodbus-build
-7cd43690f3822b6efa61b0f297cfaf8f libmodbus/src/libmodbus-stamp/libmodbus-configure
-427f95805f602afd1d1505d4a18b7f28 libmodbus/src/libmodbus-stamp/libmodbus-download
-85bd7af879b30ddb353af2ae27228b62 libmodbus/src/libmodbus-stamp/libmodbus-install
-c7bb46ac0a5d7524813f689accc19d29 libmodbus/src/libmodbus-stamp/libmodbus-mkdir
-f0117d2912cb6c9982882392648a092c libmodbus/src/libmodbus-stamp/libmodbus-patch
-f3ef4bc90b87cf7f8c1cc3e5fb237777 libmodbus/src/libmodbus-stamp/libmodbus-update
+47eba8e48726f7d27a3fddde16d00f3c lib/CMakeFiles/libmodbus
+3428bf22c6c57224f8e97e1610b3a967 lib/CMakeFiles/libmodbus-complete
+fedc3846a4662ac50e4a35a6134e979d lib/libmodbus/src/libmodbus-stamp/libmodbus-build
+21bb989d3f1ec9b211f4b389424354ec lib/libmodbus/src/libmodbus-stamp/libmodbus-configure
+248afa0bc7611cd866be253e527f8e80 lib/libmodbus/src/libmodbus-stamp/libmodbus-download
+f183649cd6cd4e89945bdce03ee1a4fd lib/libmodbus/src/libmodbus-stamp/libmodbus-install
+397f272a3fc8d5aa81a7ced8c6392e9b lib/libmodbus/src/libmodbus-stamp/libmodbus-mkdir
+c4a1a6d0c2e37a563796328a65132f60 lib/libmodbus/src/libmodbus-stamp/libmodbus-patch
+9df44e37fd3d0499127890f2a27096e4 lib/libmodbus/src/libmodbus-stamp/libmodbus-update

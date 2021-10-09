@@ -137,17 +137,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestClass
+# Target rules for targets named libmodbus
 
 # Build rule for target.
-TestClass: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestClass
-.PHONY : TestClass
+libmodbus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libmodbus
+.PHONY : libmodbus
 
 # fast build rule for target.
-TestClass/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/build
-.PHONY : TestClass/fast
+libmodbus/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libmodbus.dir/build.make lib/CMakeFiles/libmodbus.dir/build
+.PHONY : libmodbus/fast
 
 #=============================================================================
 # Target rules for targets named WeatherStation
@@ -185,8 +185,8 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... libmodbus"
 	@echo "... MeasuringValues"
-	@echo "... TestClass"
 	@echo "... WeatherStation"
 .PHONY : help
 

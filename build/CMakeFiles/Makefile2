@@ -81,7 +81,7 @@ clean: src/clean
 # Directory level rules for directory lib
 
 # Recursive "all" directory target.
-lib/all:
+lib/all: lib/CMakeFiles/libmodbus.dir/all
 .PHONY : lib/all
 
 # Recursive "preinstall" directory target.
@@ -89,14 +89,13 @@ lib/preinstall:
 .PHONY : lib/preinstall
 
 # Recursive "clean" directory target.
-lib/clean:
+lib/clean: lib/CMakeFiles/libmodbus.dir/clean
 .PHONY : lib/clean
 
 #=============================================================================
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
-src/all: src/CMakeFiles/TestClass.dir/all
 src/all: src/CMakeFiles/WeatherStation.dir/all
 src/all: src/CMakeFiles/MeasuringValues.dir/all
 .PHONY : src/all
@@ -106,50 +105,49 @@ src/preinstall:
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
-src/clean: src/CMakeFiles/TestClass.dir/clean
 src/clean: src/CMakeFiles/WeatherStation.dir/clean
 src/clean: src/CMakeFiles/MeasuringValues.dir/clean
 .PHONY : src/clean
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/TestClass.dir
+# Target rules for target lib/CMakeFiles/libmodbus.dir
 
 # All Build rule for target.
-src/CMakeFiles/TestClass.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=3,4 "Built target TestClass"
-.PHONY : src/CMakeFiles/TestClass.dir/all
+lib/CMakeFiles/libmodbus.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libmodbus.dir/build.make lib/CMakeFiles/libmodbus.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libmodbus.dir/build.make lib/CMakeFiles/libmodbus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12 "Built target libmodbus"
+.PHONY : lib/CMakeFiles/libmodbus.dir/all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/TestClass.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/TestClass.dir/all
+lib/CMakeFiles/libmodbus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/libmodbus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/TestClass.dir/rule
+.PHONY : lib/CMakeFiles/libmodbus.dir/rule
 
 # Convenience name for target.
-TestClass: src/CMakeFiles/TestClass.dir/rule
-.PHONY : TestClass
+libmodbus: lib/CMakeFiles/libmodbus.dir/rule
+.PHONY : libmodbus
 
 # clean rule for target.
-src/CMakeFiles/TestClass.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/clean
-.PHONY : src/CMakeFiles/TestClass.dir/clean
+lib/CMakeFiles/libmodbus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libmodbus.dir/build.make lib/CMakeFiles/libmodbus.dir/clean
+.PHONY : lib/CMakeFiles/libmodbus.dir/clean
 
 #=============================================================================
 # Target rules for target src/CMakeFiles/WeatherStation.dir
 
 # All Build rule for target.
-src/CMakeFiles/WeatherStation.dir/all:
+src/CMakeFiles/WeatherStation.dir/all: lib/CMakeFiles/libmodbus.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/WeatherStation.dir/build.make src/CMakeFiles/WeatherStation.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/WeatherStation.dir/build.make src/CMakeFiles/WeatherStation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=5,6 "Built target WeatherStation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=3,4 "Built target WeatherStation"
 .PHONY : src/CMakeFiles/WeatherStation.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/WeatherStation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/WeatherStation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/WeatherStation.dir/rule
@@ -167,7 +165,7 @@ src/CMakeFiles/WeatherStation.dir/clean:
 # Target rules for target src/CMakeFiles/MeasuringValues.dir
 
 # All Build rule for target.
-src/CMakeFiles/MeasuringValues.dir/all:
+src/CMakeFiles/MeasuringValues.dir/all: lib/CMakeFiles/libmodbus.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=1,2 "Built target MeasuringValues"
@@ -175,7 +173,7 @@ src/CMakeFiles/MeasuringValues.dir/all:
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/MeasuringValues.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/MeasuringValues.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/MeasuringValues.dir/rule

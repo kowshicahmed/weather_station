@@ -10,6 +10,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../CMakeLists.txt"
   "CMakeFiles/3.21.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.21.3/CMakeSystem.cmake"
+  "lib/libmodbus/tmp/libmodbus-cfgcmd.txt.in"
   "../lib/CMakeLists.txt"
   "../src/CMakeLists.txt"
   "/usr/local/share/cmake-3.21/Modules/CMakeCXXInformation.cmake"
@@ -26,6 +27,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.21/Modules/Compiler/GNU.cmake"
   "/usr/local/share/cmake-3.21/Modules/ExternalProject.cmake"
   "/usr/local/share/cmake-3.21/Modules/FetchContent.cmake"
+  "/usr/local/share/cmake-3.21/Modules/FetchContent/CMakeLists.cmake.in"
+  "/usr/local/share/cmake-3.21/Modules/FindGit.cmake"
+  "/usr/local/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/local/share/cmake-3.21/Modules/FindPackageMessage.cmake"
   "/usr/local/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/local/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake"
   "/usr/local/share/cmake-3.21/Modules/Platform/Linux.cmake"
@@ -44,13 +49,15 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CPackConfig.cmake"
   "CPackSourceConfig.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/libmodbus/tmp/libmodbus-cfgcmd.txt"
+  "_deps/libmodbus-subbuild/CMakeLists.txt"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/TestClass.dir/DependInfo.cmake"
+  "lib/CMakeFiles/libmodbus.dir/DependInfo.cmake"
   "src/CMakeFiles/WeatherStation.dir/DependInfo.cmake"
   "src/CMakeFiles/MeasuringValues.dir/DependInfo.cmake"
   )

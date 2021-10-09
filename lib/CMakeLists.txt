@@ -6,16 +6,17 @@ else()
     set(LIBMODBUS_CROSS_FLAGS )
 endif()
 
-set(MODBUS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/libmodbus)
+set(MODBUS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libmodbus)
 set(MODBUS_BIN ${CMAKE_CURRENT_BINARY_DIR}/libmodbus)
 set(MODBUS_STATIC_LIB ${MODBUS_BIN}/lib/libmodbus.a)
 set(MODBUS_INCLUDES ${MODBUS_BIN}/include)
+set(MODBUS_SRC ${MODBUS_BIN}/src)
 
 
 # libmodbus -> modbus
 ExternalProject_Add(libmodbus
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/libmodbus
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/libmodbus
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libmodbus
 
     #--Download step--------------
     DOWNLOAD_COMMAND cd ${MODBUS_DIR} && git clean -dfX && ${MODBUS_DIR}/autogen.sh
@@ -50,7 +51,7 @@ FetchContent_Declare(
 FetchContent_GetProperties(libmodbus)
 if(NOT libmodbus_POPULATED)   
   FetchContent_Populate(libmodbus)
-  add_subdirectory(${libmodbus_SOURCE_DIR} ${libmodbus_BINARY_DIR}) 
+  #add_subdirectory(${MODBUS_SRC} ${MODBUS_BIN}) 
 endif()
 
 
