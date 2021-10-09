@@ -62,6 +62,9 @@ public:
      * Param: reg_addr(starting address of a measuring value defined in the InputRegisters.h file)
      **/
     int32_t readInputReg(InputRegisters reg_addr);
+
+    /**Purpose: 
+     **/
     float readWindSpeed();
     float readMeanWindSpeed();
     float readWindDirection();
