@@ -85,6 +85,26 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/kowshicahmed/WS_Project/weather_station/build && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kowshicahmed/WS_Project/weather_station/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/kowshicahmed/WS_Project/weather_station/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/kowshicahmed/WS_Project/weather_station/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles /home/kowshicahmed/WS_Project/weather_station/build/src//CMakeFiles/progress.marks
@@ -237,6 +257,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... MeasuringValues"
 	@echo "... TestClass"

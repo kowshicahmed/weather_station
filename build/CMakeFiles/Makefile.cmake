@@ -8,14 +8,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
-  "CMakeFiles/3.21.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.21.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.21.3/CMakeSystem.cmake"
-  "libmodbus/tmp/libmodbus-cfgcmd.txt.in"
-  "../modbus.cmake"
+  "../lib/CMakeLists.txt"
   "../src/CMakeLists.txt"
-  "../test/CMakeLists.txt"
-  "/usr/local/share/cmake-3.21/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeGenericSystem.cmake"
@@ -23,16 +19,18 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/local/share/cmake-3.21/Modules/CPack.cmake"
+  "/usr/local/share/cmake-3.21/Modules/CPackComponent.cmake"
   "/usr/local/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/usr/local/share/cmake-3.21/Modules/Compiler/GNU-C.cmake"
   "/usr/local/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake"
   "/usr/local/share/cmake-3.21/Modules/Compiler/GNU.cmake"
   "/usr/local/share/cmake-3.21/Modules/ExternalProject.cmake"
-  "/usr/local/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake"
+  "/usr/local/share/cmake-3.21/Modules/FetchContent.cmake"
   "/usr/local/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/local/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake"
   "/usr/local/share/cmake-3.21/Modules/Platform/Linux.cmake"
   "/usr/local/share/cmake-3.21/Modules/Platform/UnixPaths.cmake"
+  "/usr/local/share/cmake-3.21/Templates/CPackConfig.cmake.in"
   )
 
 # The corresponding makefile is:
@@ -43,19 +41,16 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "libmodbus/tmp/libmodbus-cfgcmd.txt"
+  "CPackConfig.cmake"
+  "CPackSourceConfig.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/libmodbus.dir/DependInfo.cmake"
   "src/CMakeFiles/TestClass.dir/DependInfo.cmake"
   "src/CMakeFiles/WeatherStation.dir/DependInfo.cmake"
   "src/CMakeFiles/MeasuringValues.dir/DependInfo.cmake"
-  "test/CMakeFiles/simple_test.dir/DependInfo.cmake"
-  "test/CMakeFiles/wsfeatures_class_test.dir/DependInfo.cmake"
-  "test/CMakeFiles/modbuslib_test.dir/DependInfo.cmake"
   )

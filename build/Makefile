@@ -65,6 +65,26 @@ CMAKE_BINARY_DIR = /home/kowshicahmed/WS_Project/weather_station/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kowshicahmed/WS_Project/weather_station/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -75,15 +95,15 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/usr/local/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -115,19 +135,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named libmodbus
-
-# Build rule for target.
-libmodbus: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libmodbus
-.PHONY : libmodbus
-
-# fast build rule for target.
-libmodbus/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libmodbus.dir/build.make CMakeFiles/libmodbus.dir/build
-.PHONY : libmodbus/fast
 
 #=============================================================================
 # Target rules for targets named TestClass
@@ -168,45 +175,6 @@ MeasuringValues/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/build
 .PHONY : MeasuringValues/fast
 
-#=============================================================================
-# Target rules for targets named simple_test
-
-# Build rule for target.
-simple_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_test
-.PHONY : simple_test
-
-# fast build rule for target.
-simple_test/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/simple_test.dir/build.make test/CMakeFiles/simple_test.dir/build
-.PHONY : simple_test/fast
-
-#=============================================================================
-# Target rules for targets named wsfeatures_class_test
-
-# Build rule for target.
-wsfeatures_class_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wsfeatures_class_test
-.PHONY : wsfeatures_class_test
-
-# fast build rule for target.
-wsfeatures_class_test/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/wsfeatures_class_test.dir/build.make test/CMakeFiles/wsfeatures_class_test.dir/build
-.PHONY : wsfeatures_class_test/fast
-
-#=============================================================================
-# Target rules for targets named modbuslib_test
-
-# Build rule for target.
-modbuslib_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 modbuslib_test
-.PHONY : modbuslib_test
-
-# fast build rule for target.
-modbuslib_test/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/modbuslib_test.dir/build.make test/CMakeFiles/modbuslib_test.dir/build
-.PHONY : modbuslib_test/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -214,14 +182,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... libmodbus"
 	@echo "... MeasuringValues"
 	@echo "... TestClass"
 	@echo "... WeatherStation"
-	@echo "... modbuslib_test"
-	@echo "... simple_test"
-	@echo "... wsfeatures_class_test"
 .PHONY : help
 
 

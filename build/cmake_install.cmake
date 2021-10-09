@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/kowshicahmed/WS_Project/weather_station/build/src/cmake_install.cmake")
+  include("/home/kowshicahmed/WS_Project/weather_station/build/lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/kowshicahmed/WS_Project/weather_station/build/test/cmake_install.cmake")
+  include("/home/kowshicahmed/WS_Project/weather_station/build/src/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

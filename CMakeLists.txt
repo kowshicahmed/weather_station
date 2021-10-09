@@ -1,19 +1,16 @@
-cmake_minimum_required(VERSION 3.16)
-project(WeatherStation VERSION 1.0.0)
+cmake_minimum_required(VERSION 3.14)
+include(FetchContent)
+include(ExternalProject)
 
-# Libmodbus library
-include(modbus.cmake)
+project(WeatherStation   LANGUAGES CXX
+                DESCRIPTION "Software for WeatherStation"
+                VERSION 0.1.0)
 
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+# include(FindPackageHandleStandardArgs)
+# set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
+include(CPack)
+
+add_subdirectory(lib)
 add_subdirectory(src)
-add_subdirectory(test)
-
-# Include project header files
-target_include_directories(
-    ${PROJECT_NAME}
-    PUBLIC include
-)
-
-target_link_libraries(
-    ${PROJECT_NAME}
-    PRIVATE modbus
-)

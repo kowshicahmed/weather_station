@@ -1,7 +1,11 @@
-add_executable(simple_test simple_test.cpp)
-add_executable(wsfeatures_class_test wsfeatures_class_test.cpp)
-add_executable(modbuslib_test modbuslib_test.cpp)
+add_executable(MeasuringValuesTest MeasuringValuesTest.cpp)
+target_link_libraries(MeasuringValuesTest PRIVATE WeatherStation MeasuringValues modbus)
+set_property(TARGET MeasuringValuesTest PROPERTY CXX_STANDARD 17)
 
-target_link_libraries(simple_test PRIVATE TestClass modbus)
-target_link_libraries(wsfeatures_class_test PRIVATE WeatherStation MeasuringValues modbus)
-target_link_libraries(modbuslib_test PRIVATE modbus)
+add_executable(SimpleTest SimpleTest.cpp)
+target_link_libraries(SimpleTest PRIVATE WeatherStation MeasuringValues modbus)
+set_property(TARGET SimpleTest PROPERTY CXX_STANDARD 17)
+
+add_executable(LibmodbusTest LibmodbusTest.cpp)
+target_link_libraries(LibmodbusTest PRIVATE WeatherStation MeasuringValues modbus)
+set_property(TARGET LibmodbusTest PROPERTY CXX_STANDARD 17)
