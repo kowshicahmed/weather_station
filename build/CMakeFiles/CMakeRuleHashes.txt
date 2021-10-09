@@ -2,7 +2,7 @@
 47eba8e48726f7d27a3fddde16d00f3c lib/CMakeFiles/libmodbus
 3428bf22c6c57224f8e97e1610b3a967 lib/CMakeFiles/libmodbus-complete
 fedc3846a4662ac50e4a35a6134e979d lib/libmodbus/src/libmodbus-stamp/libmodbus-build
-21bb989d3f1ec9b211f4b389424354ec lib/libmodbus/src/libmodbus-stamp/libmodbus-configure
+75c2251df935455dcdb7406468ab7390 lib/libmodbus/src/libmodbus-stamp/libmodbus-configure
 248afa0bc7611cd866be253e527f8e80 lib/libmodbus/src/libmodbus-stamp/libmodbus-download
 f183649cd6cd4e89945bdce03ee1a4fd lib/libmodbus/src/libmodbus-stamp/libmodbus-install
 397f272a3fc8d5aa81a7ced8c6392e9b lib/libmodbus/src/libmodbus-stamp/libmodbus-mkdir

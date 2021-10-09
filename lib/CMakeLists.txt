@@ -20,6 +20,9 @@ ExternalProject_Add(libmodbus
 
     #--Download step--------------
     DOWNLOAD_COMMAND cd ${MODBUS_DIR} && git clean -dfX && ${MODBUS_DIR}/autogen.sh
+    # URL               http://archive.ubuntu.com/ubuntu/pool/universe/libm/libmodbus/libmodbus_3.1.6.orig.tar.gz
+    # URL_HASH          MD5=3f94126f7eda99e30d58cdcbf1671dfb
+
     #--Update/Patch step----------
 
     #--Configure step-------------
@@ -28,7 +31,8 @@ ExternalProject_Add(libmodbus
     BUILD_COMMAND make
     #--Install step---------------
     INSTALL_COMMAND make install
-    BUILD_BYPRODUCTS ${CMAKE_CURRENT_BINARY_DIR}/lib/libmodbus.a
+    INSTALL_DIR      ${CMAKE_CURRENT_BINARY_DIR}/libmodbus
+    BUILD_BYPRODUCTS ${MODBUS_STATIC_LIB}
 
 )
 

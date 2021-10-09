@@ -1,12 +1,12 @@
 [
 {
   "directory": "/home/kowshicahmed/WS_Project/weather_station/build/src",
-  "command": "/usr/bin/c++  -I/home/kowshicahmed/WS_Project/weather_station/src/../include -isystem /home/kowshicahmed/WS_Project/weather_station/build/lib/libmodbus/include -g -std=gnu++17 -o CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -I/home/kowshicahmed/WS_Project/weather_station/src/../include -isystem /home/kowshicahmed/WS_Project/weather_station/build/lib/libmodbus/include -g -std=gnu++17 -o CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp",
   "file": "/home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp"
 },
 {
   "directory": "/home/kowshicahmed/WS_Project/weather_station/build/src",
-  "command": "/usr/bin/c++  -I/home/kowshicahmed/WS_Project/weather_station/src/../include -isystem /home/kowshicahmed/WS_Project/weather_station/build/lib/libmodbus/include -g -std=gnu++17 -o CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/MeasuringValues.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -I/home/kowshicahmed/WS_Project/weather_station/src/../include -isystem /home/kowshicahmed/WS_Project/weather_station/build/lib/libmodbus/include -g -std=gnu++17 -o CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/MeasuringValues.cpp",
   "file": "/home/kowshicahmed/WS_Project/weather_station/src/MeasuringValues.cpp"
 }
 ]
