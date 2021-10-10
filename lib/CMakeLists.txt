@@ -27,6 +27,8 @@ ExternalProject_Add(libmodbus
 
     #--Configure step-------------
     CONFIGURE_COMMAND CC=${CMAKE_C_COMPILER} CXX=${CMAKE_CXX_COMPILER} ${MODBUS_DIR}/configure --srcdir=${MODBUS_DIR} --prefix=${MODBUS_BIN} --enable-static=yes --disable-shared
+    #CONFIGURE_COMMAND CC="/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-gcc" CXX="/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-g++" ${MODBUS_DIR}/configure --srcdir=${MODBUS_DIR} --prefix=${MODBUS_BIN} --enable-static=yes --disable-shared
+    
     #--Build step-----------------
     BUILD_COMMAND make
     #--Install step---------------

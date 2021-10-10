@@ -1,2 +1,2 @@
-/usr/bin/ar qc libMeasuringValues.a CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o
-/usr/bin/ranlib libMeasuringValues.a
+/bin/x86_64-linux-gnu-ar qc libMeasuringValues.a CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o
+/bin/x86_64-linux-gnu-ranlib libMeasuringValues.a
