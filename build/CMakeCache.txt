@@ -15,31 +15,28 @@
 ########################
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-addr2line
+CMAKE_ADDR2LINE:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-addr2line
 
 //Path to a program.
-CMAKE_AR:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-ar
+CMAKE_AR:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=
 
-//No help, variable specified on the command line.
-CMAKE_CC_COMPILER:UNINITIALIZED=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-gcc-10.3.1
-
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:UNINITIALIZED=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-g++
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-gcc-ar
+CMAKE_CXX_COMPILER_AR:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc-ar
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-gcc-ranlib
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc-ranlib
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -81,7 +78,7 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-ld
+CMAKE_LINKER:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ld
 
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
@@ -107,13 +104,13 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-nm
+CMAKE_NM:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-nm
 
 //Path to a program.
-CMAKE_OBJCOPY:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-objcopy
+CMAKE_OBJCOPY:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-objcopy
 
 //Path to a program.
-CMAKE_OBJDUMP:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-objdump
+CMAKE_OBJDUMP:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-objdump
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=Software for WeatherStation
@@ -140,10 +137,10 @@ CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-ranlib
+CMAKE_RANLIB:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ranlib
 
 //Path to a program.
-CMAKE_READELF:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-readelf
+CMAKE_READELF:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-readelf
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -193,7 +190,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-strip
+CMAKE_STRIP:FILEPATH=/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-strip
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -248,15 +245,6 @@ CPACK_SOURCE_TZ:BOOL=ON
 
 //Enable to build ZIP source packages
 CPACK_SOURCE_ZIP:BOOL=OFF
-
-//No help, variable specified on the command line.
-ENABLE_DOCS:UNINITIALIZED=OFF
-
-//No help, variable specified on the command line.
-ENABLE_DTLS:UNINITIALIZED=OFF
-
-//No help, variable specified on the command line.
-ENABLE_TESTS:UNINITIALIZED=OFF
 
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/home/kowshicahmed/WS_Project/weather_station/build/_deps

@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-g++")
+set(CMAKE_CXX_COMPILER "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "10.3.1")
@@ -18,15 +18,15 @@ set(CMAKE_CXX_SIMULATE_ID "")
 set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_CXX_SIMULATE_VERSION "")
 
-set(CMAKE_CXX_COMPILER_SYSROOT "/opt/gcc-arm-aarch64/bin/../aarch64-none-linux-gnu/libc/usr")
-set(CMAKE_COMPILER_SYSROOT "/opt/gcc-arm-aarch64/bin/../aarch64-none-linux-gnu/libc/usr")
+set(CMAKE_CXX_COMPILER_SYSROOT "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr")
+set(CMAKE_COMPILER_SYSROOT "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr")
 
 
-set(CMAKE_AR "/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-ar")
-set(CMAKE_CXX_COMPILER_AR "/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-gcc-ar")
-set(CMAKE_RANLIB "/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-ranlib")
-set(CMAKE_CXX_COMPILER_RANLIB "/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-gcc-ranlib")
-set(CMAKE_LINKER "/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-ld")
+set(CMAKE_AR "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar")
+set(CMAKE_CXX_COMPILER_AR "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc-ar")
+set(CMAKE_RANLIB "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ranlib")
+set(CMAKE_CXX_COMPILER_RANLIB "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc-ranlib")
+set(CMAKE_LINKER "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ld")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
@@ -86,7 +86,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/include/c++/10.3.1;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/include/c++/10.3.1/aarch64-none-linux-gnu;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/include/c++/10.3.1/backward;/opt/gcc-arm-aarch64/lib/gcc/aarch64-none-linux-gnu/10.3.1/include;/opt/gcc-arm-aarch64/lib/gcc/aarch64-none-linux-gnu/10.3.1/include-fixed;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/include;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/libc/usr/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/10.3.1;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/10.3.1/aarch64-none-linux-gnu;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include/c++/10.3.1/backward;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/lib/gcc/aarch64-none-linux-gnu/10.3.1/include;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/lib/gcc/aarch64-none-linux-gnu/10.3.1/include-fixed;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/opt/gcc-arm-aarch64/lib/gcc/aarch64-none-linux-gnu/10.3.1;/opt/gcc-arm-aarch64/lib/gcc;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/lib64;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/libc/lib64;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/libc/usr/lib64;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/lib;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/libc/lib;/opt/gcc-arm-aarch64/aarch64-none-linux-gnu/libc/usr/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/lib/gcc/aarch64-none-linux-gnu/10.3.1;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/lib/gcc;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/lib64;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/lib64;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/lib64;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/lib;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/lib;/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/libc/usr/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
