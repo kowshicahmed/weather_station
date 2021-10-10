@@ -85,16 +85,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/kowshicahmed/WS_Project/weather_station/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-.PHONY : package/fast
-
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
@@ -104,6 +94,16 @@ package_source:
 # Special rule for the target package_source
 package_source/fast: package_source
 .PHONY : package_source/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/kowshicahmed/WS_Project/weather_station/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -164,6 +164,20 @@ MeasuringValues/fast:
 	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/build
 .PHONY : MeasuringValues/fast
 
+# Convenience name for target.
+src/CMakeFiles/TestClass.dir/rule:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/TestClass.dir/rule
+.PHONY : src/CMakeFiles/TestClass.dir/rule
+
+# Convenience name for target.
+TestClass: src/CMakeFiles/TestClass.dir/rule
+.PHONY : TestClass
+
+# fast build rule for target.
+TestClass/fast:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/build
+.PHONY : TestClass/fast
+
 MeasuringValues.o: MeasuringValues.cpp.o
 .PHONY : MeasuringValues.o
 
@@ -187,6 +201,30 @@ MeasuringValues.s: MeasuringValues.cpp.s
 MeasuringValues.cpp.s:
 	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.s
 .PHONY : MeasuringValues.cpp.s
+
+TestClass.o: TestClass.cpp.o
+.PHONY : TestClass.o
+
+# target to build an object file
+TestClass.cpp.o:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/TestClass.cpp.o
+.PHONY : TestClass.cpp.o
+
+TestClass.i: TestClass.cpp.i
+.PHONY : TestClass.i
+
+# target to preprocess a source file
+TestClass.cpp.i:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/TestClass.cpp.i
+.PHONY : TestClass.cpp.i
+
+TestClass.s: TestClass.cpp.s
+.PHONY : TestClass.s
+
+# target to generate assembly for a file
+TestClass.cpp.s:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/TestClass.cpp.s
+.PHONY : TestClass.cpp.s
 
 WeatherStation.o: WeatherStation.cpp.o
 .PHONY : WeatherStation.o
@@ -223,10 +261,14 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... MeasuringValues"
+	@echo "... TestClass"
 	@echo "... WeatherStation"
 	@echo "... MeasuringValues.o"
 	@echo "... MeasuringValues.i"
 	@echo "... MeasuringValues.s"
+	@echo "... TestClass.o"
+	@echo "... TestClass.i"
+	@echo "... TestClass.s"
 	@echo "... WeatherStation.o"
 	@echo "... WeatherStation.i"
 	@echo "... WeatherStation.s"

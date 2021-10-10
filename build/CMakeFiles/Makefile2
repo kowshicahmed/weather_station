@@ -65,16 +65,19 @@ CMAKE_BINARY_DIR = /home/kowshicahmed/WS_Project/weather_station/build
 # The main recursive "all" target.
 all: lib/all
 all: src/all
+all: test/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: lib/preinstall
 preinstall: src/preinstall
+preinstall: test/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: lib/clean
 clean: src/clean
+clean: test/clean
 .PHONY : clean
 
 #=============================================================================
@@ -98,6 +101,7 @@ lib/clean: lib/CMakeFiles/libmodbus.dir/clean
 # Recursive "all" directory target.
 src/all: src/CMakeFiles/WeatherStation.dir/all
 src/all: src/CMakeFiles/MeasuringValues.dir/all
+src/all: src/CMakeFiles/TestClass.dir/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
@@ -107,7 +111,27 @@ src/preinstall:
 # Recursive "clean" directory target.
 src/clean: src/CMakeFiles/WeatherStation.dir/clean
 src/clean: src/CMakeFiles/MeasuringValues.dir/clean
+src/clean: src/CMakeFiles/TestClass.dir/clean
 .PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory test
+
+# Recursive "all" directory target.
+test/all: test/CMakeFiles/SimpleTest.dir/all
+test/all: test/CMakeFiles/MeasuringValuesTest.dir/all
+test/all: test/CMakeFiles/LibmodbusTest.dir/all
+.PHONY : test/all
+
+# Recursive "preinstall" directory target.
+test/preinstall:
+.PHONY : test/preinstall
+
+# Recursive "clean" directory target.
+test/clean: test/CMakeFiles/SimpleTest.dir/clean
+test/clean: test/CMakeFiles/MeasuringValuesTest.dir/clean
+test/clean: test/CMakeFiles/LibmodbusTest.dir/clean
+.PHONY : test/clean
 
 #=============================================================================
 # Target rules for target lib/CMakeFiles/libmodbus.dir
@@ -116,7 +140,7 @@ src/clean: src/CMakeFiles/MeasuringValues.dir/clean
 lib/CMakeFiles/libmodbus.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libmodbus.dir/build.make lib/CMakeFiles/libmodbus.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libmodbus.dir/build.make lib/CMakeFiles/libmodbus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12 "Built target libmodbus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20 "Built target libmodbus"
 .PHONY : lib/CMakeFiles/libmodbus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -142,7 +166,7 @@ lib/CMakeFiles/libmodbus.dir/clean:
 src/CMakeFiles/WeatherStation.dir/all: lib/CMakeFiles/libmodbus.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/WeatherStation.dir/build.make src/CMakeFiles/WeatherStation.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/WeatherStation.dir/build.make src/CMakeFiles/WeatherStation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=3,4 "Built target WeatherStation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=11,12 "Built target WeatherStation"
 .PHONY : src/CMakeFiles/WeatherStation.dir/all
 
 # Build rule for subdir invocation for target.
@@ -168,7 +192,7 @@ src/CMakeFiles/WeatherStation.dir/clean:
 src/CMakeFiles/MeasuringValues.dir/all: lib/CMakeFiles/libmodbus.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=1,2 "Built target MeasuringValues"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=3,4 "Built target MeasuringValues"
 .PHONY : src/CMakeFiles/MeasuringValues.dir/all
 
 # Build rule for subdir invocation for target.
@@ -186,6 +210,115 @@ MeasuringValues: src/CMakeFiles/MeasuringValues.dir/rule
 src/CMakeFiles/MeasuringValues.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/clean
 .PHONY : src/CMakeFiles/MeasuringValues.dir/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/TestClass.dir
+
+# All Build rule for target.
+src/CMakeFiles/TestClass.dir/all: lib/CMakeFiles/libmodbus.dir/all
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=9,10 "Built target TestClass"
+.PHONY : src/CMakeFiles/TestClass.dir/all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/TestClass.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/TestClass.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/TestClass.dir/rule
+
+# Convenience name for target.
+TestClass: src/CMakeFiles/TestClass.dir/rule
+.PHONY : TestClass
+
+# clean rule for target.
+src/CMakeFiles/TestClass.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/clean
+.PHONY : src/CMakeFiles/TestClass.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/SimpleTest.dir
+
+# All Build rule for target.
+test/CMakeFiles/SimpleTest.dir/all: lib/CMakeFiles/libmodbus.dir/all
+test/CMakeFiles/SimpleTest.dir/all: src/CMakeFiles/TestClass.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/SimpleTest.dir/build.make test/CMakeFiles/SimpleTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/SimpleTest.dir/build.make test/CMakeFiles/SimpleTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=7,8 "Built target SimpleTest"
+.PHONY : test/CMakeFiles/SimpleTest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/SimpleTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/SimpleTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/SimpleTest.dir/rule
+
+# Convenience name for target.
+SimpleTest: test/CMakeFiles/SimpleTest.dir/rule
+.PHONY : SimpleTest
+
+# clean rule for target.
+test/CMakeFiles/SimpleTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/SimpleTest.dir/build.make test/CMakeFiles/SimpleTest.dir/clean
+.PHONY : test/CMakeFiles/SimpleTest.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/MeasuringValuesTest.dir
+
+# All Build rule for target.
+test/CMakeFiles/MeasuringValuesTest.dir/all: lib/CMakeFiles/libmodbus.dir/all
+test/CMakeFiles/MeasuringValuesTest.dir/all: src/CMakeFiles/WeatherStation.dir/all
+test/CMakeFiles/MeasuringValuesTest.dir/all: src/CMakeFiles/MeasuringValues.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/MeasuringValuesTest.dir/build.make test/CMakeFiles/MeasuringValuesTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/MeasuringValuesTest.dir/build.make test/CMakeFiles/MeasuringValuesTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=5,6 "Built target MeasuringValuesTest"
+.PHONY : test/CMakeFiles/MeasuringValuesTest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/MeasuringValuesTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/MeasuringValuesTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/MeasuringValuesTest.dir/rule
+
+# Convenience name for target.
+MeasuringValuesTest: test/CMakeFiles/MeasuringValuesTest.dir/rule
+.PHONY : MeasuringValuesTest
+
+# clean rule for target.
+test/CMakeFiles/MeasuringValuesTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/MeasuringValuesTest.dir/build.make test/CMakeFiles/MeasuringValuesTest.dir/clean
+.PHONY : test/CMakeFiles/MeasuringValuesTest.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/LibmodbusTest.dir
+
+# All Build rule for target.
+test/CMakeFiles/LibmodbusTest.dir/all: lib/CMakeFiles/libmodbus.dir/all
+test/CMakeFiles/LibmodbusTest.dir/all: src/CMakeFiles/WeatherStation.dir/all
+test/CMakeFiles/LibmodbusTest.dir/all: src/CMakeFiles/MeasuringValues.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/LibmodbusTest.dir/build.make test/CMakeFiles/LibmodbusTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/LibmodbusTest.dir/build.make test/CMakeFiles/LibmodbusTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=1,2 "Built target LibmodbusTest"
+.PHONY : test/CMakeFiles/LibmodbusTest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/LibmodbusTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/LibmodbusTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/LibmodbusTest.dir/rule
+
+# Convenience name for target.
+LibmodbusTest: test/CMakeFiles/LibmodbusTest.dir/rule
+.PHONY : LibmodbusTest
+
+# clean rule for target.
+test/CMakeFiles/LibmodbusTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/LibmodbusTest.dir/build.make test/CMakeFiles/LibmodbusTest.dir/clean
+.PHONY : test/CMakeFiles/LibmodbusTest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

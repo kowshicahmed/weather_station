@@ -9,7 +9,15 @@
 /home/kowshicahmed/WS_Project/weather_station/build/lib/CMakeFiles/package.dir
 /home/kowshicahmed/WS_Project/weather_station/build/src/CMakeFiles/rebuild_cache.dir
 /home/kowshicahmed/WS_Project/weather_station/build/src/CMakeFiles/edit_cache.dir
+/home/kowshicahmed/WS_Project/weather_station/build/src/CMakeFiles/package_source.dir
 /home/kowshicahmed/WS_Project/weather_station/build/src/CMakeFiles/WeatherStation.dir
 /home/kowshicahmed/WS_Project/weather_station/build/src/CMakeFiles/MeasuringValues.dir
+/home/kowshicahmed/WS_Project/weather_station/build/src/CMakeFiles/TestClass.dir
 /home/kowshicahmed/WS_Project/weather_station/build/src/CMakeFiles/package.dir
-/home/kowshicahmed/WS_Project/weather_station/build/src/CMakeFiles/package_source.dir
+/home/kowshicahmed/WS_Project/weather_station/build/test/CMakeFiles/edit_cache.dir
+/home/kowshicahmed/WS_Project/weather_station/build/test/CMakeFiles/package_source.dir
+/home/kowshicahmed/WS_Project/weather_station/build/test/CMakeFiles/rebuild_cache.dir
+/home/kowshicahmed/WS_Project/weather_station/build/test/CMakeFiles/SimpleTest.dir
+/home/kowshicahmed/WS_Project/weather_station/build/test/CMakeFiles/MeasuringValuesTest.dir
+/home/kowshicahmed/WS_Project/weather_station/build/test/CMakeFiles/LibmodbusTest.dir
+/home/kowshicahmed/WS_Project/weather_station/build/test/CMakeFiles/package.dir

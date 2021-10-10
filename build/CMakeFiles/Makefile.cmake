@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "lib/libmodbus/tmp/libmodbus-cfgcmd.txt.in"
   "../lib/CMakeLists.txt"
   "../src/CMakeLists.txt"
+  "../test/CMakeLists.txt"
   "/usr/local/share/cmake-3.21/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeGenericSystem.cmake"
@@ -53,6 +54,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/libmodbus-subbuild/CMakeLists.txt"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -60,4 +62,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "lib/CMakeFiles/libmodbus.dir/DependInfo.cmake"
   "src/CMakeFiles/WeatherStation.dir/DependInfo.cmake"
   "src/CMakeFiles/MeasuringValues.dir/DependInfo.cmake"
+  "src/CMakeFiles/TestClass.dir/DependInfo.cmake"
+  "test/CMakeFiles/SimpleTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/MeasuringValuesTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/LibmodbusTest.dir/DependInfo.cmake"
   )

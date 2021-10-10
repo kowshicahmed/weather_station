@@ -3,7 +3,7 @@ target_link_libraries(MeasuringValuesTest PRIVATE WeatherStation MeasuringValues
 set_property(TARGET MeasuringValuesTest PROPERTY CXX_STANDARD 17)
 
 add_executable(SimpleTest SimpleTest.cpp)
-target_link_libraries(SimpleTest PRIVATE WeatherStation MeasuringValues modbus)
+target_link_libraries(SimpleTest PRIVATE TestClass modbus)
 set_property(TARGET SimpleTest PROPERTY CXX_STANDARD 17)
 
 add_executable(LibmodbusTest LibmodbusTest.cpp)

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 include(FetchContent)
 include(ExternalProject)
 
-project(WeatherStation   LANGUAGES CXX
+project(WeatherStation LANGUAGES CXX
                 DESCRIPTION "Software for WeatherStation"
                 VERSION 0.1.0)
 
@@ -14,3 +14,4 @@ include(CPack)
 #include(modbus.cmake)
 add_subdirectory(lib)
 add_subdirectory(src)
+add_subdirectory(test)

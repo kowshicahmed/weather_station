@@ -1,2 +1,2 @@
-/bin/x86_64-linux-gnu-ar qc libWeatherStation.a CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o
-/bin/x86_64-linux-gnu-ranlib libWeatherStation.a
+/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-ar qc libWeatherStation.a CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o
+/opt/gcc-arm-aarch64/bin/aarch64-none-linux-gnu-ranlib libWeatherStation.a

@@ -175,6 +175,58 @@ MeasuringValues/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MeasuringValues.dir/build.make src/CMakeFiles/MeasuringValues.dir/build
 .PHONY : MeasuringValues/fast
 
+#=============================================================================
+# Target rules for targets named TestClass
+
+# Build rule for target.
+TestClass: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestClass
+.PHONY : TestClass
+
+# fast build rule for target.
+TestClass/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/TestClass.dir/build.make src/CMakeFiles/TestClass.dir/build
+.PHONY : TestClass/fast
+
+#=============================================================================
+# Target rules for targets named SimpleTest
+
+# Build rule for target.
+SimpleTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SimpleTest
+.PHONY : SimpleTest
+
+# fast build rule for target.
+SimpleTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/SimpleTest.dir/build.make test/CMakeFiles/SimpleTest.dir/build
+.PHONY : SimpleTest/fast
+
+#=============================================================================
+# Target rules for targets named MeasuringValuesTest
+
+# Build rule for target.
+MeasuringValuesTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MeasuringValuesTest
+.PHONY : MeasuringValuesTest
+
+# fast build rule for target.
+MeasuringValuesTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/MeasuringValuesTest.dir/build.make test/CMakeFiles/MeasuringValuesTest.dir/build
+.PHONY : MeasuringValuesTest/fast
+
+#=============================================================================
+# Target rules for targets named LibmodbusTest
+
+# Build rule for target.
+LibmodbusTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibmodbusTest
+.PHONY : LibmodbusTest
+
+# fast build rule for target.
+LibmodbusTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/LibmodbusTest.dir/build.make test/CMakeFiles/LibmodbusTest.dir/build
+.PHONY : LibmodbusTest/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,7 +238,11 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... libmodbus"
+	@echo "... LibmodbusTest"
 	@echo "... MeasuringValues"
+	@echo "... MeasuringValuesTest"
+	@echo "... SimpleTest"
+	@echo "... TestClass"
 	@echo "... WeatherStation"
 .PHONY : help
 

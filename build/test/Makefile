@@ -65,6 +65,26 @@ CMAKE_BINARY_DIR = /home/kowshicahmed/WS_Project/weather_station/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/kowshicahmed/WS_Project/weather_station/build && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/kowshicahmed/WS_Project/weather_station/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -75,15 +95,15 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/kowshicahmed/WS_Project/weather_station/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,118 +137,118 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/simple_test.dir/rule:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/simple_test.dir/rule
-.PHONY : test/CMakeFiles/simple_test.dir/rule
+test/CMakeFiles/SimpleTest.dir/rule:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/SimpleTest.dir/rule
+.PHONY : test/CMakeFiles/SimpleTest.dir/rule
 
 # Convenience name for target.
-simple_test: test/CMakeFiles/simple_test.dir/rule
-.PHONY : simple_test
+SimpleTest: test/CMakeFiles/SimpleTest.dir/rule
+.PHONY : SimpleTest
 
 # fast build rule for target.
-simple_test/fast:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/simple_test.dir/build.make test/CMakeFiles/simple_test.dir/build
-.PHONY : simple_test/fast
+SimpleTest/fast:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/SimpleTest.dir/build.make test/CMakeFiles/SimpleTest.dir/build
+.PHONY : SimpleTest/fast
 
 # Convenience name for target.
-test/CMakeFiles/wsfeatures_class_test.dir/rule:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/wsfeatures_class_test.dir/rule
-.PHONY : test/CMakeFiles/wsfeatures_class_test.dir/rule
+test/CMakeFiles/MeasuringValuesTest.dir/rule:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/MeasuringValuesTest.dir/rule
+.PHONY : test/CMakeFiles/MeasuringValuesTest.dir/rule
 
 # Convenience name for target.
-wsfeatures_class_test: test/CMakeFiles/wsfeatures_class_test.dir/rule
-.PHONY : wsfeatures_class_test
+MeasuringValuesTest: test/CMakeFiles/MeasuringValuesTest.dir/rule
+.PHONY : MeasuringValuesTest
 
 # fast build rule for target.
-wsfeatures_class_test/fast:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/wsfeatures_class_test.dir/build.make test/CMakeFiles/wsfeatures_class_test.dir/build
-.PHONY : wsfeatures_class_test/fast
+MeasuringValuesTest/fast:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/MeasuringValuesTest.dir/build.make test/CMakeFiles/MeasuringValuesTest.dir/build
+.PHONY : MeasuringValuesTest/fast
 
 # Convenience name for target.
-test/CMakeFiles/modbuslib_test.dir/rule:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/modbuslib_test.dir/rule
-.PHONY : test/CMakeFiles/modbuslib_test.dir/rule
+test/CMakeFiles/LibmodbusTest.dir/rule:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/LibmodbusTest.dir/rule
+.PHONY : test/CMakeFiles/LibmodbusTest.dir/rule
 
 # Convenience name for target.
-modbuslib_test: test/CMakeFiles/modbuslib_test.dir/rule
-.PHONY : modbuslib_test
+LibmodbusTest: test/CMakeFiles/LibmodbusTest.dir/rule
+.PHONY : LibmodbusTest
 
 # fast build rule for target.
-modbuslib_test/fast:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/modbuslib_test.dir/build.make test/CMakeFiles/modbuslib_test.dir/build
-.PHONY : modbuslib_test/fast
+LibmodbusTest/fast:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/LibmodbusTest.dir/build.make test/CMakeFiles/LibmodbusTest.dir/build
+.PHONY : LibmodbusTest/fast
 
-modbuslib_test.o: modbuslib_test.cpp.o
-.PHONY : modbuslib_test.o
-
-# target to build an object file
-modbuslib_test.cpp.o:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/modbuslib_test.dir/build.make test/CMakeFiles/modbuslib_test.dir/modbuslib_test.cpp.o
-.PHONY : modbuslib_test.cpp.o
-
-modbuslib_test.i: modbuslib_test.cpp.i
-.PHONY : modbuslib_test.i
-
-# target to preprocess a source file
-modbuslib_test.cpp.i:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/modbuslib_test.dir/build.make test/CMakeFiles/modbuslib_test.dir/modbuslib_test.cpp.i
-.PHONY : modbuslib_test.cpp.i
-
-modbuslib_test.s: modbuslib_test.cpp.s
-.PHONY : modbuslib_test.s
-
-# target to generate assembly for a file
-modbuslib_test.cpp.s:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/modbuslib_test.dir/build.make test/CMakeFiles/modbuslib_test.dir/modbuslib_test.cpp.s
-.PHONY : modbuslib_test.cpp.s
-
-simple_test.o: simple_test.cpp.o
-.PHONY : simple_test.o
+LibmodbusTest.o: LibmodbusTest.cpp.o
+.PHONY : LibmodbusTest.o
 
 # target to build an object file
-simple_test.cpp.o:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/simple_test.dir/build.make test/CMakeFiles/simple_test.dir/simple_test.cpp.o
-.PHONY : simple_test.cpp.o
+LibmodbusTest.cpp.o:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/LibmodbusTest.dir/build.make test/CMakeFiles/LibmodbusTest.dir/LibmodbusTest.cpp.o
+.PHONY : LibmodbusTest.cpp.o
 
-simple_test.i: simple_test.cpp.i
-.PHONY : simple_test.i
+LibmodbusTest.i: LibmodbusTest.cpp.i
+.PHONY : LibmodbusTest.i
 
 # target to preprocess a source file
-simple_test.cpp.i:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/simple_test.dir/build.make test/CMakeFiles/simple_test.dir/simple_test.cpp.i
-.PHONY : simple_test.cpp.i
+LibmodbusTest.cpp.i:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/LibmodbusTest.dir/build.make test/CMakeFiles/LibmodbusTest.dir/LibmodbusTest.cpp.i
+.PHONY : LibmodbusTest.cpp.i
 
-simple_test.s: simple_test.cpp.s
-.PHONY : simple_test.s
+LibmodbusTest.s: LibmodbusTest.cpp.s
+.PHONY : LibmodbusTest.s
 
 # target to generate assembly for a file
-simple_test.cpp.s:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/simple_test.dir/build.make test/CMakeFiles/simple_test.dir/simple_test.cpp.s
-.PHONY : simple_test.cpp.s
+LibmodbusTest.cpp.s:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/LibmodbusTest.dir/build.make test/CMakeFiles/LibmodbusTest.dir/LibmodbusTest.cpp.s
+.PHONY : LibmodbusTest.cpp.s
 
-wsfeatures_class_test.o: wsfeatures_class_test.cpp.o
-.PHONY : wsfeatures_class_test.o
+MeasuringValuesTest.o: MeasuringValuesTest.cpp.o
+.PHONY : MeasuringValuesTest.o
 
 # target to build an object file
-wsfeatures_class_test.cpp.o:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/wsfeatures_class_test.dir/build.make test/CMakeFiles/wsfeatures_class_test.dir/wsfeatures_class_test.cpp.o
-.PHONY : wsfeatures_class_test.cpp.o
+MeasuringValuesTest.cpp.o:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/MeasuringValuesTest.dir/build.make test/CMakeFiles/MeasuringValuesTest.dir/MeasuringValuesTest.cpp.o
+.PHONY : MeasuringValuesTest.cpp.o
 
-wsfeatures_class_test.i: wsfeatures_class_test.cpp.i
-.PHONY : wsfeatures_class_test.i
+MeasuringValuesTest.i: MeasuringValuesTest.cpp.i
+.PHONY : MeasuringValuesTest.i
 
 # target to preprocess a source file
-wsfeatures_class_test.cpp.i:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/wsfeatures_class_test.dir/build.make test/CMakeFiles/wsfeatures_class_test.dir/wsfeatures_class_test.cpp.i
-.PHONY : wsfeatures_class_test.cpp.i
+MeasuringValuesTest.cpp.i:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/MeasuringValuesTest.dir/build.make test/CMakeFiles/MeasuringValuesTest.dir/MeasuringValuesTest.cpp.i
+.PHONY : MeasuringValuesTest.cpp.i
 
-wsfeatures_class_test.s: wsfeatures_class_test.cpp.s
-.PHONY : wsfeatures_class_test.s
+MeasuringValuesTest.s: MeasuringValuesTest.cpp.s
+.PHONY : MeasuringValuesTest.s
 
 # target to generate assembly for a file
-wsfeatures_class_test.cpp.s:
-	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/wsfeatures_class_test.dir/build.make test/CMakeFiles/wsfeatures_class_test.dir/wsfeatures_class_test.cpp.s
-.PHONY : wsfeatures_class_test.cpp.s
+MeasuringValuesTest.cpp.s:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/MeasuringValuesTest.dir/build.make test/CMakeFiles/MeasuringValuesTest.dir/MeasuringValuesTest.cpp.s
+.PHONY : MeasuringValuesTest.cpp.s
+
+SimpleTest.o: SimpleTest.cpp.o
+.PHONY : SimpleTest.o
+
+# target to build an object file
+SimpleTest.cpp.o:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/SimpleTest.dir/build.make test/CMakeFiles/SimpleTest.dir/SimpleTest.cpp.o
+.PHONY : SimpleTest.cpp.o
+
+SimpleTest.i: SimpleTest.cpp.i
+.PHONY : SimpleTest.i
+
+# target to preprocess a source file
+SimpleTest.cpp.i:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/SimpleTest.dir/build.make test/CMakeFiles/SimpleTest.dir/SimpleTest.cpp.i
+.PHONY : SimpleTest.cpp.i
+
+SimpleTest.s: SimpleTest.cpp.s
+.PHONY : SimpleTest.s
+
+# target to generate assembly for a file
+SimpleTest.cpp.s:
+	cd /home/kowshicahmed/WS_Project/weather_station/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/SimpleTest.dir/build.make test/CMakeFiles/SimpleTest.dir/SimpleTest.cpp.s
+.PHONY : SimpleTest.cpp.s
 
 # Help Target
 help:
@@ -237,19 +257,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... modbuslib_test"
-	@echo "... simple_test"
-	@echo "... wsfeatures_class_test"
-	@echo "... modbuslib_test.o"
-	@echo "... modbuslib_test.i"
-	@echo "... modbuslib_test.s"
-	@echo "... simple_test.o"
-	@echo "... simple_test.i"
-	@echo "... simple_test.s"
-	@echo "... wsfeatures_class_test.o"
-	@echo "... wsfeatures_class_test.i"
-	@echo "... wsfeatures_class_test.s"
+	@echo "... LibmodbusTest"
+	@echo "... MeasuringValuesTest"
+	@echo "... SimpleTest"
+	@echo "... LibmodbusTest.o"
+	@echo "... LibmodbusTest.i"
+	@echo "... LibmodbusTest.s"
+	@echo "... MeasuringValuesTest.o"
+	@echo "... MeasuringValuesTest.i"
+	@echo "... MeasuringValuesTest.s"
+	@echo "... SimpleTest.o"
+	@echo "... SimpleTest.i"
+	@echo "... SimpleTest.s"
 .PHONY : help
 
 
