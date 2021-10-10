@@ -73,15 +73,15 @@ src/CMakeFiles/TestClass.dir/TestClass.cpp.o: src/CMakeFiles/TestClass.dir/flags
 src/CMakeFiles/TestClass.dir/TestClass.cpp.o: ../src/TestClass.cpp
 src/CMakeFiles/TestClass.dir/TestClass.cpp.o: src/CMakeFiles/TestClass.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/TestClass.dir/TestClass.cpp.o"
-	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/TestClass.dir/TestClass.cpp.o -MF CMakeFiles/TestClass.dir/TestClass.cpp.o.d -o CMakeFiles/TestClass.dir/TestClass.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/TestClass.cpp
+	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/TestClass.dir/TestClass.cpp.o -MF CMakeFiles/TestClass.dir/TestClass.cpp.o.d -o CMakeFiles/TestClass.dir/TestClass.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/TestClass.cpp
 
 src/CMakeFiles/TestClass.dir/TestClass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestClass.dir/TestClass.cpp.i"
-	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kowshicahmed/WS_Project/weather_station/src/TestClass.cpp > CMakeFiles/TestClass.dir/TestClass.cpp.i
+	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kowshicahmed/WS_Project/weather_station/src/TestClass.cpp > CMakeFiles/TestClass.dir/TestClass.cpp.i
 
 src/CMakeFiles/TestClass.dir/TestClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestClass.dir/TestClass.cpp.s"
-	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kowshicahmed/WS_Project/weather_station/src/TestClass.cpp -o CMakeFiles/TestClass.dir/TestClass.cpp.s
+	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kowshicahmed/WS_Project/weather_station/src/TestClass.cpp -o CMakeFiles/TestClass.dir/TestClass.cpp.s
 
 # Object files for target TestClass
 TestClass_OBJECTS = \

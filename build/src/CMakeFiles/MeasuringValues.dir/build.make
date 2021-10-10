@@ -73,15 +73,15 @@ src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o: src/CMakeFiles/Measuri
 src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o: ../src/MeasuringValues.cpp
 src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o: src/CMakeFiles/MeasuringValues.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o"
-	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o -MF CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o.d -o CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/MeasuringValues.cpp
+	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o -MF CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o.d -o CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/MeasuringValues.cpp
 
 src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.i"
-	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kowshicahmed/WS_Project/weather_station/src/MeasuringValues.cpp > CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.i
+	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kowshicahmed/WS_Project/weather_station/src/MeasuringValues.cpp > CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.i
 
 src/CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.s"
-	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kowshicahmed/WS_Project/weather_station/src/MeasuringValues.cpp -o CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.s
+	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kowshicahmed/WS_Project/weather_station/src/MeasuringValues.cpp -o CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.s
 
 # Object files for target MeasuringValues
 MeasuringValues_OBJECTS = \

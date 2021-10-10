@@ -1,2 +1,2 @@
-/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar qc libMeasuringValues.a CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o
-/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ranlib libMeasuringValues.a
+/bin/x86_64-linux-gnu-ar qc libMeasuringValues.a CMakeFiles/MeasuringValues.dir/MeasuringValues.cpp.o
+/bin/x86_64-linux-gnu-ranlib libMeasuringValues.a
