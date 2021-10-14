@@ -73,15 +73,15 @@ src/CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o: src/CMakeFiles/WeatherSt
 src/CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o: ../src/WeatherStation.cpp
 src/CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o: src/CMakeFiles/WeatherStation.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kowshicahmed/WS_Project/weather_station/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o"
-	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o -MF CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o.d -o CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp
+	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o -MF CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o.d -o CMakeFiles/WeatherStation.dir/WeatherStation.cpp.o -c /home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp
 
 src/CMakeFiles/WeatherStation.dir/WeatherStation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WeatherStation.dir/WeatherStation.cpp.i"
-	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp > CMakeFiles/WeatherStation.dir/WeatherStation.cpp.i
+	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp > CMakeFiles/WeatherStation.dir/WeatherStation.cpp.i
 
 src/CMakeFiles/WeatherStation.dir/WeatherStation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WeatherStation.dir/WeatherStation.cpp.s"
-	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp -o CMakeFiles/WeatherStation.dir/WeatherStation.cpp.s
+	cd /home/kowshicahmed/WS_Project/weather_station/build/src && /opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kowshicahmed/WS_Project/weather_station/src/WeatherStation.cpp -o CMakeFiles/WeatherStation.dir/WeatherStation.cpp.s
 
 # Object files for target WeatherStation
 WeatherStation_OBJECTS = \

@@ -1,7 +1,7 @@
 /*
  * Copyright © 2001-2011 Stéphane Raimbault <stephane.raimbault@gmail.com>
  *
- * SPDX-License-Identifier: LGPL-2.1+
+ * SPDX-License-Identifier: LGPL-2.1-or-later
  *
  * This library implements the Modbus protocol.
  * http://libmodbus.org/
@@ -1406,7 +1406,7 @@ int modbus_mask_write_register(modbus_t *ctx, int addr, uint16_t and_mask, uint1
     int rc;
     int req_length;
     /* The request length can not exceed _MIN_REQ_LENGTH - 2 and 4 bytes to
-     * store the masks. The ugly substraction is there to remove the 'nb' value
+     * store the masks. The ugly subtraction is there to remove the 'nb' value
      * (2 bytes) which is not used. */
     uint8_t req[_MIN_REQ_LENGTH + 2];
 

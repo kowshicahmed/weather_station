@@ -1,2 +1,2 @@
-/bin/x86_64-linux-gnu-ar qc libTestClass.a CMakeFiles/TestClass.dir/TestClass.cpp.o
-/bin/x86_64-linux-gnu-ranlib libTestClass.a
+/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar qc libTestClass.a CMakeFiles/TestClass.dir/TestClass.cpp.o
+/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ranlib libTestClass.a

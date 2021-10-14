@@ -39,7 +39,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/bin/x86_64-linux-gnu-objdump")
+  set(CMAKE_OBJDUMP "/opt/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
