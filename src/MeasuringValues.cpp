@@ -42,6 +42,14 @@ int32_t MeasuringValues::readInputReg(InputRegisters reg_addr)
     return data;
 }
 
+void MeasuringValues::display_map()
+{
+    // for (auto it = my_map.begin(); it != my_map.end(); it++)
+    //    {
+    //         std::cout << it->first << ":" << it->second << std::endl; 
+    //    }
+}
+
 float MeasuringValues::readAirTemp()
 {
     return(readInputReg(AIR_TEMP_ADDR)/MULTIPLIER_10);

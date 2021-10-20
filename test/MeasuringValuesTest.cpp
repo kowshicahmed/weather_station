@@ -8,6 +8,7 @@ int main ()
     std::cout << std::fixed << connection_1.readMeasuringValues()->readAirTemp() << std::endl;
     std::cout << connection_1.readMeasuringValues()->readInputReg(WIND_SPEED_ADDR) << std::endl;
     std::cout << std::fixed << connection_1.readMeasuringValues()->readDate() << std::endl;
+    connection_1.readMeasuringValues()->display_map();
 
 
     

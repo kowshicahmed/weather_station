@@ -7,6 +7,7 @@
 #pragma once
 #include "/usr/include/modbus/modbus.h"
 #include "InputRegisters.h"
+#include "InputRegMap.h"
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -62,6 +63,7 @@ public:
      * Param: reg_addr(starting address of a measuring value defined in the InputRegisters.h file)
      **/
     int32_t readInputReg(InputRegisters reg_addr);
+    void display_map();
 
     /**Purpose: 
      **/

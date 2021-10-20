@@ -4,6 +4,8 @@
  *  Created on: 01 Oct 2021
  *      Author: Kowshic Ahmed Akash
  */
+#pragma once
+#include <map>
 
 /*
 typedef enum
@@ -75,3 +77,5 @@ typedef enum
     OPERATING_TIME_ADDR = 35061,      // Operating time, unit:s, mult:1, e.g:255 = 255s
     MEAN_VAL_HEIGHT_GPS_ADDR = 35063  // Mean value of the height over MSL, received via GPS, unit:m, mult:10, e.g:240 = 24.0m above MSL
 }InputRegisters;
+
+typedef std::map <InputRegisters, int> InputRegMap;
